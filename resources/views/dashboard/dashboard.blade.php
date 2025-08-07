@@ -1,21 +1,21 @@
 @extends('layouts.master')
 @section('content')
-    <?php  
+    <?php
         $hour   = date ("G");
         $minute = date ("i");
         $second = date ("s");
-        $msg = " Today is " . date ("l, M. d, Y.");
+        $msg = " Hoy es " . date ("l, d \d\e M \d\e Y");
 
-        if ($hour == 00 && $hour <= 9 && $minute <= 59 && $second <= 59) {
-            $greet = "Good Morning,";
+        if ($hour >= 0 && $hour <= 9 && $minute <= 59 && $second <= 59) {
+            $greet = "Buenos días,";
         } else if ($hour >= 10 && $hour <= 11 && $minute <= 59 && $second <= 59) {
-            $greet = "Good Day,";
+            $greet = "Buen día,";
         } else if ($hour >= 12 && $hour <= 15 && $minute <= 59 && $second <= 59) {
-            $greet = "Good Afternoon,";
+            $greet = "Buenas tardes,";
         } else if ($hour >= 16 && $hour <= 23 && $minute <= 59 && $second <= 59) {
-            $greet = "Good Evening,";
+            $greet = "Buenas noches,";
         } else {
-            $greet = "Welcome,";
+            $greet = "Bienvenido,";
         }
     ?>
     <div class="page-wrapper">
@@ -25,9 +25,9 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h3 class="page-title">{{ $greet }} Welcome, {{ Session::get('name') }}!</h3>
+                        <h3 class="page-title">{{ $greet }} ¡Bienvenido, {{ Session::get('name') }}!</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item active">Panel de Control</li>
                         </ul>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                     <div class="card dash-widget">
                         <div class="card-body"> <span class="dash-widget-icon"><i class="fa fa-cubes"></i></span>
                             <div class="dash-widget-info">
-                                <h3>112</h3> <span>Projects</span>
+                                <h3>112</h3> <span>Proyectos</span>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                     <div class="card dash-widget">
                         <div class="card-body"> <span class="dash-widget-icon"><i class="fa fa-usd"></i></span>
                             <div class="dash-widget-info">
-                                <h3>44</h3> <span>Clients</span>
+                                <h3>44</h3> <span>Clientes</span>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                     <div class="card dash-widget">
                         <div class="card-body"> <span class="dash-widget-icon"><i class="fa fa-diamond"></i></span>
                             <div class="dash-widget-info">
-                                <h3>37</h3> <span>Tasks</span>
+                                <h3>37</h3> <span>Tareas</span>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                     <div class="card dash-widget">
                         <div class="card-body"> <span class="dash-widget-icon"><i class="fa fa-user"></i></span>
                             <div class="dash-widget-info">
-                                <h3>218</h3> <span>Employees</span>
+                                <h3>218</h3> <span>Empleados</span>
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                         <div class="col-md-6 text-center">
                             <div class="card">
                                 <div class="card-body">
-                                    <h3 class="card-title">Total Revenue</h3>
+                                    <h3 class="card-title">Ingresos Totales</h3>
                                     <div id="bar-charts"></div>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@
                         <div class="col-md-6 text-center">
                             <div class="card">
                                 <div class="card-body">
-                                    <h3 class="card-title">Sales Overview</h3>
+                                    <h3 class="card-title">Resumen de Ventas</h3>
                                     <div id="line-charts"></div>
                                 </div>
                             </div>
@@ -99,53 +99,53 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <div> <span class="d-block">New Employees</span> </div>
+                                    <div> <span class="d-block">Nuevos Empleados</span> </div>
                                     <div> <span class="text-success">+10%</span> </div>
                                 </div>
                                 <h3 class="mb-3">10</h3>
                                 <div class="progress mb-2" style="height: 5px;">
                                     <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <p class="mb-0">Overall Employees 218</p>
+                                <p class="mb-0">Total de Empleados 218</p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <div> <span class="d-block">Earnings</span> </div>
+                                    <div> <span class="d-block">Ganancias</span> </div>
                                     <div> <span class="text-success">+12.5%</span> </div>
                                 </div>
                                 <h3 class="mb-3">$1,42,300</h3>
                                 <div class="progress mb-2" style="height: 5px;">
                                     <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <p class="mb-0">Previous Month <span class="text-muted">$1,15,852</span></p>
+                                <p class="mb-0">Mes Anterior <span class="text-muted">$1,15,852</span></p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <div> <span class="d-block">Expenses</span> </div>
+                                    <div> <span class="d-block">Gastos</span> </div>
                                     <div> <span class="text-danger">-2.8%</span> </div>
                                 </div>
                                 <h3 class="mb-3">$8,500</h3>
                                 <div class="progress mb-2" style="height: 5px;">
                                     <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <p class="mb-0">Previous Month <span class="text-muted">$7,500</span></p>
+                                <p class="mb-0">Mes Anterior <span class="text-muted">$7,500</span></p>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <div> <span class="d-block">Profit</span> </div>
+                                    <div> <span class="d-block">Beneficio</span> </div>
                                     <div> <span class="text-danger">-75%</span> </div>
                                 </div>
                                 <h3 class="mb-3">$1,12,000</h3>
                                 <div class="progress mb-2" style="height: 5px;">
                                     <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <p class="mb-0">Previous Month <span class="text-muted">$1,42,000</span></p>
+                                <p class="mb-0">Mes Anterior <span class="text-muted">$1,42,000</span></p>
                             </div>
                         </div>
                     </div>
@@ -156,34 +156,34 @@
                 <div class="col-md-12 col-lg-12 col-xl-4 d-flex">
                     <div class="card flex-fill dash-statistics">
                         <div class="card-body">
-                            <h5 class="card-title">Statistics</h5>
+                            <h5 class="card-title">Estadísticas</h5>
                             <div class="stats-list">
                                 <div class="stats-info">
-                                    <p>Today Leave <strong>4 <small>/ 65</small></strong></p>
+                                    <p>Ausencias Hoy <strong>4 <small>/ 65</small></strong></p>
                                     <div class="progress">
                                         <div class="progress-bar bg-primary" role="progressbar" style="width: 31%" aria-valuenow="31" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="stats-info">
-                                    <p>Pending Invoice <strong>15 <small>/ 92</small></strong></p>
+                                    <p>Facturas Pendientes <strong>15 <small>/ 92</small></strong></p>
                                     <div class="progress">
                                         <div class="progress-bar bg-warning" role="progressbar" style="width: 31%" aria-valuenow="31" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="stats-info">
-                                    <p>Completed Projects <strong>85 <small>/ 112</small></strong></p>
+                                    <p>Proyectos Completados <strong>85 <small>/ 112</small></strong></p>
                                     <div class="progress">
                                         <div class="progress-bar bg-success" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="stats-info">
-                                    <p>Open Tickets <strong>190 <small>/ 212</small></strong></p>
+                                    <p>Tickets Abiertos <strong>190 <small>/ 212</small></strong></p>
                                     <div class="progress">
                                         <div class="progress-bar bg-danger" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                                 <div class="stats-info">
-                                    <p>Closed Tickets <strong>22 <small>/ 212</small></strong></p>
+                                    <p>Tickets Cerrados <strong>22 <small>/ 212</small></strong></p>
                                     <div class="progress">
                                         <div class="progress-bar bg-info" role="progressbar" style="width: 22%" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
@@ -195,18 +195,18 @@
                 <div class="col-md-12 col-lg-6 col-xl-4 d-flex">
                     <div class="card flex-fill">
                         <div class="card-body">
-                            <h4 class="card-title">Task Statistics</h4>
+                            <h4 class="card-title">Estadísticas de Tareas</h4>
                             <div class="statistics">
                                 <div class="row">
                                     <div class="col-md-6 col-6 text-center">
                                         <div class="stats-box mb-4">
-                                            <p>Total Tasks</p>
+                                            <p>Tareas Totales</p>
                                             <h3>385</h3>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-6 text-center">
                                         <div class="stats-box mb-4">
-                                            <p>Overdue Tasks</p>
+                                            <p>Tareas Atrasadas</p>
                                             <h3>19</h3>
                                         </div>
                                     </div>
@@ -220,11 +220,11 @@
                                 <div class="progress-bar bg-info" role="progressbar" style="width: 10%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100">10%</div>
                             </div>
                             <div>
-                                <p><i class="fa fa-dot-circle-o text-purple mr-2"></i>Completed Tasks <span class="float-right">166</span></p>
-                                <p><i class="fa fa-dot-circle-o text-warning mr-2"></i>Inprogress Tasks <span class="float-right">115</span></p>
-                                <p><i class="fa fa-dot-circle-o text-success mr-2"></i>On Hold Tasks <span class="float-right">31</span></p>
-                                <p><i class="fa fa-dot-circle-o text-danger mr-2"></i>Pending Tasks <span class="float-right">47</span></p>
-                                <p class="mb-0"><i class="fa fa-dot-circle-o text-info mr-2"></i>Review Tasks <span class="float-right">5</span></p>
+                                <p><i class="fa fa-dot-circle-o text-purple mr-2"></i>Tareas Completadas <span class="float-right">166</span></p>
+                                <p><i class="fa fa-dot-circle-o text-warning mr-2"></i>Tareas en Progreso <span class="float-right">115</span></p>
+                                <p><i class="fa fa-dot-circle-o text-success mr-2"></i>Tareas en Espera <span class="float-right">31</span></p>
+                                <p><i class="fa fa-dot-circle-o text-danger mr-2"></i>Tareas Pendientes <span class="float-right">47</span></p>
+                                <p class="mb-0"><i class="fa fa-dot-circle-o text-info mr-2"></i>Tareas en Revisión <span class="float-right">5</span></p>
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                 <div class="col-md-12 col-lg-6 col-xl-4 d-flex">
                     <div class="card flex-fill">
                         <div class="card-body">
-                            <h4 class="card-title">Today Absent <span class="badge bg-inverse-danger ml-2">5</span></h4>
+                            <h4 class="card-title">Ausentes Hoy <span class="badge bg-inverse-danger ml-2">5</span></h4>
                             <div class="leave-info-box">
                                 <div class="media align-items-center">
                                     <a href="profile.html" class="avatar"><img alt="" src="assets/img/user.jpg"></a>
@@ -242,8 +242,8 @@
                                 </div>
                                 <div class="row align-items-center mt-3">
                                     <div class="col-6">
-                                        <h6 class="mb-0">4 Sep 2019</h6> <span class="text-sm text-muted">Leave Date</span> </div>
-                                    <div class="col-6 text-right"> <span class="badge bg-inverse-danger">Pending</span> </div>
+                                        <h6 class="mb-0">4 Sep 2019</h6> <span class="text-sm text-muted">Fecha de Ausencia</span> </div>
+                                    <div class="col-6 text-right"> <span class="badge bg-inverse-danger">Pendiente</span> </div>
                                 </div>
                             </div>
                             <div class="leave-info-box">
@@ -255,11 +255,11 @@
                                 </div>
                                 <div class="row align-items-center mt-3">
                                     <div class="col-6">
-                                        <h6 class="mb-0">4 Sep 2019</h6> <span class="text-sm text-muted">Leave Date</span> </div>
-                                    <div class="col-6 text-right"> <span class="badge bg-inverse-success">Approved</span> </div>
+                                        <h6 class="mb-0">4 Sep 2019</h6> <span class="text-sm text-muted">Fecha de Ausencia</span> </div>
+                                    <div class="col-6 text-right"> <span class="badge bg-inverse-success">Aprobado</span> </div>
                                 </div>
                             </div>
-                            <div class="load-more text-center"> <a class="text-dark" href="javascript:void(0);">Load More</a> </div>
+                            <div class="load-more text-center"> <a class="text-dark" href="javascript:void(0);">Cargar Más</a> </div>
                         </div>
                     </div>
                 </div>
@@ -269,17 +269,17 @@
                 <div class="col-md-6 d-flex">
                     <div class="card card-table flex-fill">
                         <div class="card-header">
-                            <h3 class="card-title mb-0">Invoices</h3> </div>
+                            <h3 class="card-title mb-0">Facturas</h3> </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-nowrap custom-table mb-0">
                                     <thead>
                                         <tr>
-                                            <th>Invoice ID</th>
-                                            <th>Client</th>
-                                            <th>Due Date</th>
+                                            <th>ID de Factura</th>
+                                            <th>Cliente</th>
+                                            <th>Fecha de Vencimiento</th>
                                             <th>Total</th>
-                                            <th>Status</th>
+                                            <th>Estado</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -290,7 +290,7 @@
                                             </td>
                                             <td>11 Mar 2019</td>
                                             <td>$380</td>
-                                            <td> <span class="badge bg-inverse-warning">Partially Paid</span>
+                                            <td> <span class="badge bg-inverse-warning">Parcialmente Pagado</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -300,7 +300,7 @@
                                             <td>8 Feb 2019</td>
                                             <td>$500</td>
                                             <td>
-                                                <span class="badge bg-inverse-success">Paid</span>
+                                                <span class="badge bg-inverse-success">Pagado</span>
                                             </td>
                                         </tr>
                                         <tr>
@@ -310,7 +310,7 @@
                                             <td>23 Jan 2019</td>
                                             <td>$60</td>
                                             <td>
-                                                <span class="badge bg-inverse-danger">Unpaid</span>
+                                                <span class="badge bg-inverse-danger">No Pagado</span>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -318,25 +318,25 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="invoices.html">View all invoices</a>
+                            <a href="invoices.html">Ver todas las facturas</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex">
                     <div class="card card-table flex-fill">
                         <div class="card-header">
-                            <h3 class="card-title mb-0">Payments</h3>
+                            <h3 class="card-title mb-0">Pagos</h3>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table custom-table table-nowrap mb-0">
                                     <thead>
                                         <tr>
-                                            <th>Invoice ID</th>
-                                            <th>Client</th>
-                                            <th>Payment Type</th>
-                                            <th>Paid Date</th>
-                                            <th>Paid Amount</th>
+                                            <th>ID de Factura</th>
+                                            <th>Cliente</th>
+                                            <th>Tipo de Pago</th>
+                                            <th>Fecha de Pago</th>
+                                            <th>Monto Pagado</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -369,7 +369,7 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="payments.html">View all payments</a>
+                            <a href="payments.html">Ver todos los pagos</a>
                         </div>
                     </div>
                 </div>
@@ -378,17 +378,17 @@
                 <div class="col-md-6 d-flex">
                     <div class="card card-table flex-fill">
                         <div class="card-header">
-                            <h3 class="card-title mb-0">Clients</h3>
+                            <h3 class="card-title mb-0">Clientes</h3>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table custom-table mb-0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Status</th>
-                                            <th class="text-right">Action</th>
+                                            <th>Nombre</th>
+                                            <th>Correo Electrónico</th>
+                                            <th>Estado</th>
+                                            <th class="text-right">Acción</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -402,13 +402,13 @@
                                             <td>barrycuda@example.com</td>
                                             <td>
                                                 <div class="dropdown action-label">
-                                                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-success"></i> Active </a>
+                                                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-success"></i> Activo </a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="#">
-                                                            <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                            <i class="fa fa-dot-circle-o text-success"></i> Activo
                                                         </a>
                                                         <a class="dropdown-item" href="#">
-                                                            <i class="fa fa-dot-circle-o text-danger"></i> Inactive
+                                                            <i class="fa fa-dot-circle-o text-danger"></i> Inactivo
                                                         </a>
                                                     </div>
                                                 </div>
@@ -417,10 +417,10 @@
                                                 <div class="dropdown dropdown-action"> <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-pencil m-r-5"></i> Edit
+                                                            <i class="fa fa-pencil m-r-5"></i> Editar
                                                         </a>
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-trash-o m-r-5"></i> Delete
+                                                            <i class="fa fa-trash-o m-r-5"></i> Eliminar
                                                         </a> 
                                                     </div>
                                                 </div>
@@ -436,13 +436,13 @@
                                             <td>tressawexler@example.com</td>
                                             <td>
                                                 <div class="dropdown action-label">
-                                                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-danger"></i> Inactive </a>
+                                                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-danger"></i> Inactivo </a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="#">
-                                                            <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                            <i class="fa fa-dot-circle-o text-success"></i> Activo
                                                         </a>
                                                         <a class="dropdown-item" href="#">
-                                                            <i class="fa fa-dot-circle-o text-danger"></i> Inactive
+                                                            <i class="fa fa-dot-circle-o text-danger"></i> Inactivo
                                                         </a>
                                                     </div>
                                                 </div>
@@ -452,10 +452,10 @@
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-pencil m-r-5"></i> Edit
+                                                            <i class="fa fa-pencil m-r-5"></i> Editar
                                                         </a>
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-trash-o m-r-5"></i> Delete
+                                                            <i class="fa fa-trash-o m-r-5"></i> Eliminar
                                                         </a>
                                                     </div>
                                                 </div>
@@ -473,13 +473,13 @@
                                             <td>rubybartlett@example.com</td>
                                             <td>
                                                 <div class="dropdown action-label">
-                                                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-danger"></i> Inactive </a>
+                                                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-danger"></i> Inactivo </a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="#">
-                                                            <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                            <i class="fa fa-dot-circle-o text-success"></i> Activo
                                                         </a>
                                                         <a class="dropdown-item" href="#">
-                                                            <i class="fa fa-dot-circle-o text-danger"></i> Inactive
+                                                            <i class="fa fa-dot-circle-o text-danger"></i> Inactivo
                                                         </a>
                                                     </div>
                                                 </div>
@@ -489,10 +489,10 @@
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-pencil m-r-5"></i> Edit
+                                                            <i class="fa fa-pencil m-r-5"></i> Editar
                                                         </a>
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-trash-o m-r-5"></i> Delete
+                                                            <i class="fa fa-trash-o m-r-5"></i> Eliminar
                                                         </a>
                                                     </div>
                                                 </div>
@@ -510,12 +510,12 @@
                                             <td>mistytison@example.com</td>
                                             <td>
                                                 <div class="dropdown action-label">
-                                                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-success"></i> Active </a>
+                                                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-success"></i> Activo </a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="#">
-                                                            <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                            <i class="fa fa-dot-circle-o text-success"></i> Activo
                                                         </a> <a class="dropdown-item" href="#">
-                                                            <i class="fa fa-dot-circle-o text-danger"></i> Inactive
+                                                            <i class="fa fa-dot-circle-o text-danger"></i> Inactivo
                                                         </a>
                                                     </div>
                                                 </div>
@@ -525,10 +525,10 @@
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-pencil m-r-5"></i> Edit
+                                                            <i class="fa fa-pencil m-r-5"></i> Editar
                                                         </a>
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-trash-o m-r-5"></i> Delete
+                                                            <i class="fa fa-trash-o m-r-5"></i> Eliminar
                                                         </a>
                                                     </div>
                                                 </div>
@@ -546,13 +546,13 @@
                                             <td>danieldeacon@example.com</td>
                                             <td>
                                                 <div class="dropdown action-label">
-                                                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-danger"></i> Inactive </a>
+                                                    <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-dot-circle-o text-danger"></i> Inactivo </a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="#">
-                                                            <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                            <i class="fa fa-dot-circle-o text-success"></i> Activo
                                                         </a> 
                                                         <a class="dropdown-item" href="#">
-                                                            <i class="fa fa-dot-circle-o text-danger"></i> Inactive
+                                                            <i class="fa fa-dot-circle-o text-danger"></i> Inactivo
                                                         </a>
                                                     </div>
                                                 </div>
@@ -562,10 +562,10 @@
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-pencil m-r-5"></i> Edit
+                                                            <i class="fa fa-pencil m-r-5"></i> Editar
                                                         </a>
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-trash-o m-r-5"></i> Delete
+                                                            <i class="fa fa-trash-o m-r-5"></i> Eliminar
                                                         </a>
                                                     </div>
                                                 </div>
@@ -575,21 +575,21 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="card-footer"> <a href="clients.html">View all clients</a> </div>
+                        <div class="card-footer"> <a href="clients.html">Ver todos los clientes</a> </div>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex">
                     <div class="card card-table flex-fill">
                         <div class="card-header">
-                            <h3 class="card-title mb-0">Recent Projects</h3> </div>
+                            <h3 class="card-title mb-0">Proyectos Recientes</h3> </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table custom-table mb-0">
                                     <thead>
                                         <tr>
-                                            <th>Project Name </th>
-                                            <th>Progress</th>
-                                            <th class="text-right">Action</th>
+                                            <th>Nombre del Proyecto </th>
+                                            <th>Progreso</th>
+                                            <th class="text-right">Acción</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -599,8 +599,8 @@
                                                     <a href="project-view.html">Office Management</a>
                                                 </h2>
                                                 <small class="block text-ellipsis">   
-                                                    <span>1</span> <span class="text-muted">open tasks, </span>
-                                                    <span>9</span> <span class="text-muted">tasks completed</span>
+                                                    <span>1</span> <span class="text-muted">tareas abiertas, </span>
+                                                    <span>9</span> <span class="text-muted">tareas completadas</span>
                                                 </small>
                                             </td>
                                             <td>
@@ -613,10 +613,10 @@
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-pencil m-r-5"></i> Edit
+                                                            <i class="fa fa-pencil m-r-5"></i> Editar
                                                         </a>
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-trash-o m-r-5"></i> Delete
+                                                            <i class="fa fa-trash-o m-r-5"></i> Eliminar
                                                         </a>
                                                     </div>
                                                 </div>
@@ -628,8 +628,8 @@
                                                     <a href="project-view.html">Project Management</a>
                                                 </h2> 
                                                 <small class="block text-ellipsis">
-                                                    <span>2</span> <span class="text-muted">open tasks, </span>
-                                                    <span>5</span> <span class="text-muted">tasks completed</span>
+                                                    <span>2</span> <span class="text-muted">tareas abiertas, </span>
+                                                    <span>5</span> <span class="text-muted">tareas completadas</span>
                                                 </small>
                                             </td>
                                             <td>
@@ -642,10 +642,10 @@
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-pencil m-r-5"></i> Edit
+                                                            <i class="fa fa-pencil m-r-5"></i> Editar
                                                         </a>
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-trash-o m-r-5"></i> Delete
+                                                            <i class="fa fa-trash-o m-r-5"></i> Eliminar
                                                         </a>
                                                     </div>
                                                 </div>
@@ -657,8 +657,8 @@
                                                     <a href="project-view.html">Video Calling App</a>
                                                 </h2>
                                                 <small class="block text-ellipsis">
-                                                    <span>3</span> <span class="text-muted">open tasks, </span>
-                                                    <span>3</span> <span class="text-muted">tasks completed</span>
+                                                    <span>3</span> <span class="text-muted">tareas abiertas, </span>
+                                                    <span>3</span> <span class="text-muted">tareas completadas</span>
                                                 </small>
                                             </td>
                                             <td>
@@ -671,10 +671,10 @@
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-pencil m-r-5"></i> Edit
+                                                            <i class="fa fa-pencil m-r-5"></i> Editar
                                                         </a>
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-trash-o m-r-5"></i> Delete
+                                                            <i class="fa fa-trash-o m-r-5"></i> Eliminar
                                                         </a>
                                                     </div>
                                                 </div>
@@ -686,8 +686,8 @@
                                                     <a href="project-view.html">Hospital Administration</a>
                                                 </h2>
                                                 <small class="block text-ellipsis">
-                                                    <span>12</span> <span class="text-muted">open tasks, </span>
-                                                    <span>4</span> <span class="text-muted">tasks completed</span>
+                                                    <span>12</span> <span class="text-muted">tareas abiertas, </span>
+                                                    <span>4</span> <span class="text-muted">tareas completadas</span>
                                                 </small>
                                             </td>
                                             <td>
@@ -700,10 +700,10 @@
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-pencil m-r-5"></i> Edit
+                                                            <i class="fa fa-pencil m-r-5"></i> Editar
                                                         </a>
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-trash-o m-r-5"></i> Delete
+                                                            <i class="fa fa-trash-o m-r-5"></i> Eliminar
                                                         </a>
                                                     </div>
                                                 </div>
@@ -715,8 +715,8 @@
                                                     <a href="project-view.html">Digital Marketplace</a>
                                                 </h2>
                                                 <small class="block text-ellipsis">
-                                                    <span>7</span> <span class="text-muted">open tasks, </span>
-                                                    <span>14</span> <span class="text-muted">tasks completed</span>
+                                                    <span>7</span> <span class="text-muted">tareas abiertas, </span>
+                                                    <span>14</span> <span class="text-muted">tareas completadas</span>
                                                 </small>
                                             
                                             </td>
@@ -730,10 +730,10 @@
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-pencil m-r-5"></i> Edit
+                                                            <i class="fa fa-pencil m-r-5"></i> Editar
                                                         </a>
                                                         <a class="dropdown-item" href="javascript:void(0)">
-                                                            <i class="fa fa-trash-o m-r-5"></i> Delete
+                                                            <i class="fa fa-trash-o m-r-5"></i> Eliminar
                                                         </a>
                                                     </div>
                                                 </div>
@@ -744,7 +744,7 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="projects.html">View all projects</a>
+                            <a href="projects.html">Ver todos los proyectos</a>
                         </div>
                     </div>
                 </div>

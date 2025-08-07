@@ -11,14 +11,14 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Overtime</h3>
+                        <h3 class="page-title">Horas Extra</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Overtime</li>
+                            <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Horas Extra</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_overtime"><i class="fa fa-plus"></i> Add Overtime</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_overtime"><i class="fa fa-plus"></i> Añadir Horas Extra</a>
                     </div>
                 </div>
             </div>
@@ -28,25 +28,25 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                     <div class="stats-info">
-                        <h6>Overtime Employee</h6>
-                        <h4>12 <span>this month</span></h4>
+                        <h6>Empleados con Horas Extra</h6>
+                        <h4>12 <span>este mes</span></h4>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                     <div class="stats-info">
-                        <h6>Overtime Hours</h6>
-                        <h4>118 <span>this month</span></h4>
+                        <h6>Horas Extra</h6>
+                        <h4>118 <span>este mes</span></h4>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                     <div class="stats-info">
-                        <h6>Pending Request</h6>
+                        <h6>Solicitudes Pendientes</h6>
                         <h4>23</h4>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                     <div class="stats-info">
-                        <h6>Rejected</h6>
+                        <h6>Rechazadas</h6>
                         <h4>5</h4>
                     </div>
                 </div>
@@ -60,14 +60,14 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Name</th>
-                                    <th>OT Date</th>
-                                    <th class="text-center">OT Hours</th>
-                                    <th>OT Type</th>
-                                    <th>Description</th>
-                                    <th class="text-center">Status</th>
-                                    <th>Approved by</th>
-                                    <th class="text-right">Actions</th>
+                                    <th>Nombre</th>
+                                    <th>Fecha de Horas Extra</th>
+                                    <th class="text-center">Horas Extra</th>
+                                    <th>Tipo de Horas Extra</th>
+                                    <th>Descripción</th>
+                                    <th class="text-center">Estado</th>
+                                    <th>Aprobado por</th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -81,12 +81,12 @@
                                     </td>
                                     <td>8 Mar 2019</td>
                                     <td class="text-center">2</td>
-                                    <td>Normal day OT 1.5x</td>
+                                    <td>Día normal OT 1.5x</td>
                                     <td>Lorem ipsum dollar</td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="javascript:void(0);">
-                                                <i class="fa fa-dot-circle-o text-purple"></i> New
+                                                <i class="fa fa-dot-circle-o text-purple"></i> Nuevo
                                             </a>
                                         </div>
                                     </td>
@@ -100,8 +100,8 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_overtime"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_overtime"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_overtime"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_overtime"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -119,7 +119,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Overtime</h5>
+                        <h5 class="modal-title">Añadir Horas Extra</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -127,7 +127,7 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label>Select Employee <span class="text-danger">*</span></label>
+                                <label>Seleccionar Empleado <span class="text-danger">*</span></label>
                                 <select class="select">
                                     <option>-</option>
                                     <option>John Doe</option>
@@ -136,21 +136,21 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Overtime Date <span class="text-danger">*</span></label>
+                                <label>Fecha de Horas Extra <span class="text-danger">*</span></label>
                                 <div class="cal-icon">
                                     <input class="form-control datetimepicker" type="text">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Overtime Hours <span class="text-danger">*</span></label>
+                                <label>Horas Extra <span class="text-danger">*</span></label>
                                 <input class="form-control" type="text">
                             </div>
                             <div class="form-group">
-                                <label>Description <span class="text-danger">*</span></label>
+                                <label>Descripción <span class="text-danger">*</span></label>
                                 <textarea rows="4" class="form-control"></textarea>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Submit</button>
+                                <button class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -164,7 +164,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Overtime</h5>
+                        <h5 class="modal-title">Editar Horas Extra</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -172,7 +172,7 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label>Select Employee <span class="text-danger">*</span></label>
+                                <label>Seleccionar Empleado <span class="text-danger">*</span></label>
                                 <select class="select">
                                     <option>-</option>
                                     <option>John Doe</option>
@@ -181,21 +181,21 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Overtime Date <span class="text-danger">*</span></label>
+                                <label>Fecha de Horas Extra <span class="text-danger">*</span></label>
                                 <div class="cal-icon">
                                     <input class="form-control datetimepicker" type="text">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Overtime Hours <span class="text-danger">*</span></label>
+                                <label>Horas Extra <span class="text-danger">*</span></label>
                                 <input class="form-control" type="text">
                             </div>
                             <div class="form-group">
-                                <label>Description <span class="text-danger">*</span></label>
+                                <label>Descripción <span class="text-danger">*</span></label>
                                 <textarea rows="4" class="form-control"></textarea>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Submit</button>
+                                <button class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -210,16 +210,16 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete Overtime</h3>
-                            <p>Are you sure want to Cancel this?</p>
+                            <h3>Eliminar Horas Extra</h3>
+                            <p>¿Estás seguro de que quieres cancelar esto?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Eliminar</a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                 </div>
                             </div>
                         </div>

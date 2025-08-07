@@ -9,10 +9,10 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h3 class="page-title">Leave Settings</h3>
+                        <h3 class="page-title">Configuración de Vacaciones</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Leave Settings</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Configuración de Vacaciones</li>
                         </ul>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                     <div class="card leave-box" id="leave_annual">
                         <div class="card-body">
                             <div class="h3 card-title with-switch">
-                                Annual 											
+                                Anual
                                 <div class="onoffswitch">
                                     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switch_annual" checked>
                                     <label class="onoffswitch-label" for="switch_annual">
@@ -41,13 +41,13 @@
                                     <div class="leave-left">
                                         <div class="input-box">
                                             <div class="form-group">
-                                                <label>Days</label>
+                                                <label>Días</label>
                                                 <input type="text" class="form-control" disabled>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="leave-right">
-                                        <button class="leave-edit-btn">Edit</button>
+                                        <button class="leave-edit-btn">Editar</button>
                                     </div>
                                 </div>
                                 <!-- /Annual Days Leave -->
@@ -56,7 +56,7 @@
                                 <div class="leave-row">
                                     <div class="leave-left">
                                         <div class="input-box">
-                                            <label class="d-block">Carry forward</label>
+                                            <label class="d-block">Acumulativo</label>
                                             <div class="leave-inline-form">
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="carry_no" value="option1" disabled>
@@ -64,11 +64,11 @@
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="carry_yes" value="option2" disabled>
-                                                    <label class="form-check-label" for="carry_yes">Yes</label>
+                                                    <label class="form-check-label" for="carry_yes">Sí</label>
                                                 </div>
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
-                                                        <span class="input-group-text">Max</span>
+                                                        <span class="input-group-text">Máx</span>
                                                     </div>
                                                     <input type="text" class="form-control" disabled>
                                                 </div>
@@ -77,7 +77,7 @@
                                     </div>
                                     <div class="leave-right">
                                         <button class="leave-edit-btn">
-                                            Edit
+                                            Editar
                                         </button>
                                     </div>
                                 </div>
@@ -87,7 +87,7 @@
                                 <div class="leave-row">
                                     <div class="leave-left">
                                         <div class="input-box">
-                                            <label class="d-block">Earned leave</label>
+                                            <label class="d-block">Vacaciones Ganadas</label>
                                             <div class="leave-inline-form">
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="earned_no" value="option1" disabled>
@@ -95,14 +95,14 @@
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="earned_yes" value="option2" disabled>
-                                                    <label class="form-check-label" for="earned_yes">Yes</label>
+                                                    <label class="form-check-label" for="earned_yes">Sí</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="leave-right">
                                         <button class="leave-edit-btn">
-                                            Edit
+                                            Editar
                                         </button>
                                     </div>
                                 </div>
@@ -112,24 +112,24 @@
                             <!-- Custom Policy -->
                             <div class="custom-policy">
                                 <div class="leave-header">
-                                    <div class="title">Custom policy</div>
+                                    <div class="title">Política Personalizada</div>
                                     <div class="leave-action">
-                                        <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#add_custom_policy"><i class="fa fa-plus"></i> Add custom policy</button>
+                                        <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#add_custom_policy"><i class="fa fa-plus"></i> Añadir Política Personalizada</button>
                                     </div>
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-hover table-nowrap leave-table mb-0">
                                         <thead>
                                             <tr>
-                                                <th class="l-name">Name</th>
-                                                <th class="l-days">Days</th>
-                                                <th class="l-assignee">Assignee</th>
+                                                <th class="l-name">Nombre</th>
+                                                <th class="l-days">Días</th>
+                                                <th class="l-assignee">Asignado a</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>5 Year Service </td>
+                                                <td>5 Años de Servicio</td>
                                                 <td>5</td>
                                                 <td>
                                                     <a href="#" class="avatar"><img alt="" src="{{ URL::to('assets/img/profiles/avatar-02.jpg') }}"></a>
@@ -139,8 +139,8 @@
                                                     <div class="dropdown dropdown-action">
                                                         <a aria-expanded="false" data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="material-icons">more_vert</i></a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#edit_custom_policy"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#delete_custom_policy"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#edit_custom_policy"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#delete_custom_policy"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -158,7 +158,7 @@
                     <div class="card leave-box" id="leave_sick">
                         <div class="card-body">
                             <div class="h3 card-title with-switch">
-                                Sick 											
+                                Enfermedad
                                 <div class="onoffswitch">
                                     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switch_sick" checked>
                                     <label class="onoffswitch-label" for="switch_sick">
@@ -172,14 +172,14 @@
                                     <div class="leave-left">
                                         <div class="input-box">
                                             <div class="form-group">
-                                                <label>Days</label>
+                                                <label>Días</label>
                                                 <input type="text" class="form-control" disabled>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="leave-right">
                                         <button class="leave-edit-btn">
-                                            Edit
+                                            Editar
                                         </button>
                                     </div>
                                 </div>
@@ -192,7 +192,7 @@
                     <div class="card leave-box" id="leave_hospitalisation">
                         <div class="card-body">
                             <div class="h3 card-title with-switch">
-                                Hospitalisation 											
+                                Hospitalización
                                 <div class="onoffswitch">
                                     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switch_hospitalisation">
                                     <label class="onoffswitch-label" for="switch_hospitalisation">
@@ -208,14 +208,14 @@
                                     <div class="leave-left">
                                         <div class="input-box">
                                             <div class="form-group">
-                                                <label>Days</label>
+                                                <label>Días</label>
                                                 <input type="text" class="form-control" disabled>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="leave-right">
                                         <button class="leave-edit-btn">
-                                            Edit
+                                            Editar
                                         </button>
                                     </div>
                                 </div>
@@ -225,24 +225,24 @@
                             <!-- Custom Policy -->
                             <div class="custom-policy">
                                 <div class="leave-header">
-                                    <div class="title">Custom policy</div>
+                                    <div class="title">Política Personalizada</div>
                                     <div class="leave-action">
-                                        <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#add_custom_policy"><i class="fa fa-plus"></i> Add custom policy</button>
+                                        <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#add_custom_policy"><i class="fa fa-plus"></i> Añadir Política Personalizada</button>
                                     </div>
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-hover table-nowrap leave-table mb-0">
                                         <thead>
                                             <tr>
-                                                <th class="l-name">Name</th>
-                                                <th class="l-days">Days</th>
-                                                <th class="l-assignee">Assignee</th>
+                                                <th class="l-name">Nombre</th>
+                                                <th class="l-days">Días</th>
+                                                <th class="l-assignee">Asignado a</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>5 Year Service </td>
+                                                <td>5 Años de Servicio</td>
                                                 <td>5</td>
                                                 <td>
                                                     <a href="#" class="avatar"><img alt="" src="{{ URL::to('assets/img/profiles/avatar-02.jpg') }}"></a>
@@ -252,8 +252,8 @@
                                                     <div class="dropdown dropdown-action">
                                                         <a aria-expanded="false" data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="material-icons">more_vert</i></a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a href="#" class="dropdown-item"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                            <a href="#" class="dropdown-item"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                            <a href="#" class="dropdown-item"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                            <a href="#" class="dropdown-item"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -272,7 +272,7 @@
                     <div class="card leave-box" id="leave_maternity">
                         <div class="card-body">
                             <div class="h3 card-title with-switch">
-                                Maternity  <span class="subtitle">Assigned to female only</span>
+                                Maternidad  <span class="subtitle">Asignado solo a mujeres</span>
                                 <div class="onoffswitch">
                                     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switch_maternity" checked>
                                     <label class="onoffswitch-label" for="switch_maternity">
@@ -286,14 +286,14 @@
                                     <div class="leave-left">
                                         <div class="input-box">
                                             <div class="form-group">
-                                                <label>Days</label>
+                                                <label>Días</label>
                                                 <input type="text" class="form-control" disabled>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="leave-right">
                                         <button class="leave-edit-btn">
-                                            Edit
+                                            Editar
                                         </button>
                                     </div>
                                 </div>
@@ -306,7 +306,7 @@
                     <div class="card leave-box" id="leave_paternity">
                         <div class="card-body">
                             <div class="h3 card-title with-switch">
-                                Paternity  <span class="subtitle">Assigned to male only</span>
+                                Paternidad  <span class="subtitle">Asignado solo a hombres</span>
                                 <div class="onoffswitch">
                                     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switch_paternity">
                                     <label class="onoffswitch-label" for="switch_paternity">
@@ -320,14 +320,14 @@
                                     <div class="leave-left">
                                         <div class="input-box">
                                             <div class="form-group">
-                                                <label>Days</label>
+                                                <label>Días</label>
                                                 <input type="text" class="form-control" disabled>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="leave-right">
                                         <button class="leave-edit-btn">
-                                            Edit
+                                            Editar
                                         </button>
                                     </div>
                                 </div>
@@ -340,7 +340,7 @@
                     <div class="card leave-box mb-0" id="leave_custom01">
                         <div class="card-body">
                             <div class="h3 card-title with-switch">
-                                LOP 											
+                                LOP
                                 <div class="onoffswitch">
                                     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switch_custom01" checked>
                                     <label class="onoffswitch-label" for="switch_custom01">
@@ -348,7 +348,7 @@
                                         <span class="onoffswitch-switch"></span>
                                     </label>
                                 </div>
-                                <button class="btn btn-danger leave-delete-btn" type="button">Delete</button>
+                                <button class="btn btn-danger leave-delete-btn" type="button">Eliminar</button>
                             </div>
                             <div class="leave-item">
                             
@@ -357,13 +357,13 @@
                                     <div class="leave-left">
                                         <div class="input-box">
                                             <div class="form-group">
-                                                <label>Days</label>
+                                                <label>Días</label>
                                                 <input type="text" class="form-control" disabled>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="leave-right">
-                                        <button class="leave-edit-btn">Edit</button>
+                                        <button class="leave-edit-btn">Editar</button>
                                     </div>
                                 </div>
                                 <!-- /Annual Days Leave -->
@@ -372,7 +372,7 @@
                                 <div class="leave-row">
                                     <div class="leave-left">
                                         <div class="input-box">
-                                            <label class="d-block">Carry forward</label>
+                                            <label class="d-block">Acumulativo</label>
                                             <div class="leave-inline-form">
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="carryForward" id="carry_no_01" value="option1" disabled>
@@ -380,11 +380,11 @@
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="carryForward" id="carry_yes_01" value="option2" disabled>
-                                                    <label class="form-check-label" for="carry_yes_01">Yes</label>
+                                                    <label class="form-check-label" for="carry_yes_01">Sí</label>
                                                 </div>
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
-                                                        <span class="input-group-text">Max</span>
+                                                        <span class="input-group-text">Máx</span>
                                                     </div>
                                                     <input type="text" class="form-control" disabled>
                                                 </div>
@@ -393,7 +393,7 @@
                                     </div>
                                     <div class="leave-right">
                                         <button class="leave-edit-btn">
-                                            Edit
+                                            Editar
                                         </button>
                                     </div>
                                 </div>
@@ -403,7 +403,7 @@
                                 <div class="leave-row">
                                     <div class="leave-left">
                                         <div class="input-box">
-                                            <label class="d-block">Earned leave</label>
+                                            <label class="d-block">Vacaciones Ganadas</label>
                                             <div class="leave-inline-form">
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" disabled>
@@ -411,14 +411,14 @@
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" disabled>
-                                                    <label class="form-check-label" for="inlineRadio2">Yes</label>
+                                                    <label class="form-check-label" for="inlineRadio2">Sí</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="leave-right">
                                         <button class="leave-edit-btn">
-                                            Edit
+                                            Editar
                                         </button>
                                     </div>
                                 </div>
@@ -428,24 +428,24 @@
                             <!-- Custom Policy -->
                             <div class="custom-policy">
                                 <div class="leave-header">
-                                    <div class="title">Custom policy</div>
+                                    <div class="title">Política Personalizada</div>
                                     <div class="leave-action">
-                                        <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#add_custom_policy"><i class="fa fa-plus"></i> Add custom policy</button>
+                                        <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#add_custom_policy"><i class="fa fa-plus"></i> Añadir Política Personalizada</button>
                                     </div>
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-hover table-nowrap leave-table mb-0">
                                         <thead>
                                             <tr>
-                                                <th class="l-name">Name</th>
-                                                <th class="l-days">Days</th>
-                                                <th class="l-assignee">Assignee</th>
+                                                <th class="l-name">Nombre</th>
+                                                <th class="l-days">Días</th>
+                                                <th class="l-assignee">Asignado a</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>5 Year Service </td>
+                                                <td>5 Años de Servicio</td>
                                                 <td>5</td>
                                                 <td>
                                                     <a href="#" class="avatar"><img alt="" src="{{ URL::to('assets/img/profiles/avatar-02.jpg') }}"></a>
@@ -455,8 +455,8 @@
                                                     <div class="dropdown dropdown-action">
                                                         <a aria-expanded="false" data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="material-icons">more_vert</i></a>
                                                         <div class="dropdown-menu dropdown-menu-right">
-                                                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#edit_custom_policy"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#delete_custom_policy"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#edit_custom_policy"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#delete_custom_policy"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -480,7 +480,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Custom Policy</h5>
+                        <h5 class="modal-title">Añadir Política Personalizada</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -488,15 +488,15 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label>Policy Name <span class="text-danger">*</span></label>
+                                <label>Nombre de la Política <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Days <span class="text-danger">*</span></label>
+                                <label>Días <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control">
                             </div>
                             <div class="form-group leave-duallist">
-                                <label>Add employee</label>
+                                <label>Añadir empleado</label>
                                 <div class="row">
                                     <div class="col-lg-5 col-sm-5">
                                         <select name="customleave_from" id="customleave_select" class="form-control" size="5" multiple="multiple">
@@ -520,7 +520,7 @@
                             </div>
 
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Submit</button>
+                                <button class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -534,7 +534,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Custom Policy</h5>
+                        <h5 class="modal-title">Editar Política Personalizada</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -542,15 +542,15 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <label>Policy Name <span class="text-danger">*</span></label>
+                                <label>Nombre de la Política <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" value="LOP">
                             </div>
                             <div class="form-group">
-                                <label>Days <span class="text-danger">*</span></label>
+                                <label>Días <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" value="4">
                             </div>
                             <div class="form-group leave-duallist">
-                                <label>Add employee</label>
+                                <label>Añadir empleado</label>
                                 <div class="row">
                                     <div class="col-lg-5 col-sm-5">
                                         <select name="edit_customleave_from" id="edit_customleave_select" class="form-control" size="5" multiple="multiple">
@@ -574,7 +574,7 @@
                             </div>
 
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Submit</button>
+                                <button class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -589,16 +589,16 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete Custom Policy</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Eliminar Política Personalizada</h3>
+                            <p>¿Estás seguro de que quieres eliminar?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Eliminar</a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                 </div>
                             </div>
                         </div>

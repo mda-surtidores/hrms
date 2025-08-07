@@ -27,7 +27,7 @@
                             <i class="fa fa-search"></i>
                         </a>
                         <form action="search.html">
-                            <input class="form-control" type="text" placeholder="Search here">
+                            <input class="form-control" type="text" placeholder="Buscar aquí">
                             <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
@@ -36,24 +36,24 @@
                 <!-- Flag -->
                 <li class="nav-item dropdown has-arrow flag-nav">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
-                        <img src="{{ URL::to('assets/img/flags/us.png') }}" alt="" height="20"> <span>English</span>
+                        <img src="{{ URL::to('assets/img/flags/us.png') }}" alt="" height="20"> <span>Inglés</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="{{ URL::to('assets/img/flags/us.png') }}" alt="" height="16"> English
+                            <img src="{{ URL::to('assets/img/flags/us.png') }}" alt="" height="16"> Inglés
                         </a>
                         <a href="javascript:void(0);" class="dropdown-item">
-                            <img src="{{ URL::to('assets/img/flags/kh.png') }}" alt="" height="16"> Khmer 
+                            <img src="{{ URL::to('assets/img/flags/kh.png') }}" alt="" height="16"> Jemer
                         </a>
                     </div>
                 </li>
                 <!-- /Flag -->
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    <a class="nav-link" href="{{ route('login') }}">Iniciar Sesión</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">Register</a>
+                    <a class="nav-link" href="{{ route('register') }}">Registrarse</a>
                 </li>
             </ul>
             <!-- /Header Menu -->
@@ -62,8 +62,8 @@
             <div class="dropdown mobile-user-menu">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="{{ route('login') }}">Login</a>
-                    <a class="dropdown-item" href="{{ route('register') }}">Register</a>
+                    <a class="dropdown-item" href="{{ route('login') }}">Iniciar Sesión</a>
+                    <a class="dropdown-item" href="{{ route('register') }}">Registrarse</a>
                 </div>
             </div>
             <!-- /Mobile Menu -->
@@ -79,10 +79,10 @@
                 <div class="page-header">
                     <div class="row align-items-center">
                         <div class="col">
-                            <h3 class="page-title">Jobs</h3>
+                            <h3 class="page-title">Trabajos</h3>
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Jobs</li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Panel de Control</a></li>
+                                <li class="breadcrumb-item active">Trabajos</li>
                             </ul>
                         </div>
                     </div>
@@ -94,10 +94,10 @@
                             <h3 class="job-title">{{ $job_view[0]->job_title }}</h3>
                             <span class="job-dept">{{ $job_view[0]->department }}</span>
                             <ul class="job-post-det">
-                                <li><i class="fa fa-calendar"></i> Post Date: <span class="text-blue">{{ date('d F, Y',strtotime($job_view[0]->start_date)) }}</span></li>
-                                <li><i class="fa fa-calendar"></i> Last Date: <span class="text-blue">{{ date('d F, Y',strtotime($job_view[0]->expired_date)) }}</span></li>
-                                <li><i class="fa fa-user-o"></i> Applications: <span class="text-blue">4</span></li>
-                                <li><i class="fa fa-eye"></i> Views: <span class="text-blue">
+                                <li><i class="fa fa-calendar"></i> Fecha de Publicación: <span class="text-blue">{{ date('d F, Y',strtotime($job_view[0]->start_date)) }}</span></li>
+                                <li><i class="fa fa-calendar"></i> Última Fecha: <span class="text-blue">{{ date('d F, Y',strtotime($job_view[0]->expired_date)) }}</span></li>
+                                <li><i class="fa fa-user-o"></i> Solicitudes: <span class="text-blue">4</span></li>
+                                <li><i class="fa fa-eye"></i> Vistas: <span class="text-blue">
                                     @if (!empty($job_view[0]->count))
                                         {{ $job_view[0]->count }}
                                         @else
@@ -108,7 +108,7 @@
                             </ul>
                         </div>
                         <div class="job-content job-widget">
-                            <div class="job-desc-title"><h4>Job Description</h4></div>
+                            <div class="job-desc-title"><h4>Descripción del Trabajo</h4></div>
                             <div class="job-description">
                                 <p>{!!nl2br ($job_view[0]->description) !!}</p>
                             </div>
@@ -116,30 +116,30 @@
                     </div>
                     <div class="col-md-4">
                         <div class="job-det-info job-widget">
-                            <a class="btn job-btn" href="#" data-toggle="modal" data-target="#apply_job">Apply For This Job</a>
+                            <a class="btn job-btn" href="#" data-toggle="modal" data-target="#apply_job">Solicitar este Trabajo</a>
                             <div class="info-list">
                                 <span><i class="fa fa-bar-chart"></i></span>
-                                <h5>Job Type</h5>
+                                <h5>Tipo de Trabajo</h5>
                                 <p>{{ $job_view[0]->job_type }}</p>
                             </div>
                             <div class="info-list">
                                 <span><i class="fa fa-money"></i></span>
-                                <h5>Salary</h5>
+                                <h5>Salario</h5>
                                 <p>{{ $job_view[0]->salary_from }}$ - {{ $job_view[0]->salary_to }}$</p>
                             </div>
                             <div class="info-list">
                                 <span><i class="fa fa-suitcase"></i></span>
-                                <h5>Experience</h5>
+                                <h5>Experiencia</h5>
                                 <p>{{ $job_view[0]->experience }}</p>
                             </div>
                             <div class="info-list">
                                 <span><i class="fa fa-ticket"></i></span>
-                                <h5>Vacancy</h5>
+                                <h5>Vacante</h5>
                                 <p>{{ $job_view[0]->no_of_vacancies }}</p>
                             </div>
                             <div class="info-list">
                                 <span><i class="fa fa-map-signs"></i></span>
-                                <h5>Location</h5>
+                                <h5>Ubicación</h5>
                                 <p>{!!nl2br($job_view[0]->job_location) !!}</p>
                             </div>
                             <div class="info-list">
@@ -149,7 +149,7 @@
                                 </p>
                             </div>
                             <div class="info-list text-center">
-                                <a class="app-ends" href="#">Application ends in 2d 7h 6m</a>
+                                <a class="app-ends" href="#">La solicitud finaliza en 2d 7h 6m</a>
                             </div>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Add Your Details</h5>
+                            <h5 class="modal-title">Añada sus Detalles</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -171,31 +171,31 @@
                             <form id="apply_jobs" action="{{ route('form/apply/job/save') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <label>Name</label>
+                                    <label>Nombre</label>
                                     <input type="hidden" name="job_title" value="{{ $job_view[0]->job_title }}">
                                     <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" value="{{ old('name') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label>Phone</label>
+                                    <label>Teléfono</label>
                                     <input class="form-control @error('phone') is-invalid @enderror" type="tel" name="phone" value="{{ old('phone') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label>Email Address</label>
+                                    <label>Dirección de Correo Electrónico</label>
                                     <input class="form-control @error('email') is-invalid @enderror" type="text" name="email" value="{{ old('email') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label>Message</label>
+                                    <label>Mensaje</label>
                                     <textarea class="form-control @error('message') is-invalid @enderror" name="message">{{ old('message') }}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label>Upload your CV</label>
+                                    <label>Suba su CV</label>
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input @error('cv_upload') is-invalid @enderror" id="cv_upload" name="cv_upload">
-                                        <label class="custom-file-label" for="cv_upload">Choose file</label>
+                                        <label class="custom-file-label" for="cv_upload">Elija un archivo</label>
                                     </div>
                                 </div>
                                 <div class="submit-section">
-                                    <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                                    <button type="submit" class="btn btn-primary submit-btn">Enviar</button>
                                 </div>
                             </form>
                         </div>

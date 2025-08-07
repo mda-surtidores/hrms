@@ -9,19 +9,19 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Holidays <span>{{ date('Y') }}</span></h3>
+                        <h3 class="page-title">Días Festivos <span>{{ date('Y') }}</span></h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Holidays</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Días Festivos</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_holiday"><i class="fa fa-plus"></i> Add Holiday</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_holiday"><i class="fa fa-plus"></i> Añadir Día Festivo</a>
                     </div>
                 </div>
             </div>
 			<!-- /Page Header -->
-              
+
             @php
                 use Carbon\Carbon;
                 $today_date = Carbon::today()->format('d-m-Y');
@@ -34,11 +34,11 @@
                                 <tr>
                                     <th>No</th>
                                     <th hidden>id</th>
-                                    <th>Title </th>
-                                    <th>Holiday Date</th>
+                                    <th>Título </th>
+                                    <th>Fecha del Día Festivo</th>
                                     <th hidden></th>
-                                    <th>Day</th>
-                                    <th class="text-right">Action</th>
+                                    <th>Día</th>
+                                    <th class="text-right">Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -65,8 +65,8 @@
                                                 <div class="dropdown dropdown-action">
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item userUpdate" data-toggle="modal" data-id="'.$items->id.'" data-target="#edit_holiday"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                        <a class="dropdown-item deleteRecord" href="#" data-toggle="modal" data-target="#deleteRecord"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                        <a class="dropdown-item userUpdate" data-toggle="modal" data-id="'.$items->id.'" data-target="#edit_holiday"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                        <a class="dropdown-item deleteRecord" href="#" data-toggle="modal" data-target="#deleteRecord"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                                     </div>
                                                 </div>
                                             </td>
@@ -86,7 +86,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Holiday</h5>
+                        <h5 class="modal-title">Añadir Día Festivo</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -95,17 +95,17 @@
                         <form action="{{ route('form/holidays/save') }}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label>Holiday Name <span class="text-danger">*</span></label>
+                                <label>Nombre del Día Festivo <span class="text-danger">*</span></label>
                                 <input class="form-control" type="text" id="nameHoliday" name="nameHoliday">
                             </div>
                             <div class="form-group">
-                                <label>Holiday Date <span class="text-danger">*</span></label>
+                                <label>Fecha del Día Festivo <span class="text-danger">*</span></label>
                                 <div class="cal-icon">
                                     <input class="form-control datetimepicker" type="text" id="holidayDate" name="holidayDate">
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -119,7 +119,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Holiday</h5>
+                        <h5 class="modal-title">Editar Día Festivo</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -129,17 +129,17 @@
                             @csrf
                             <input type="hidden" name="id" id="e_id" value="">
                             <div class="form-group">
-                                <label>Holiday Name <span class="text-danger">*</span></label>
+                                <label>Nombre del Día Festivo <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="holidayName_edit" name="holidayName" value="">
                             </div>
                             <div class="form-group">
-                                <label>Holiday Date <span class="text-danger">*</span></label>
+                                <label>Fecha del Día Festivo <span class="text-danger">*</span></label>
                                 <div class="cal-icon">
                                     <input type="text" class="form-control datetimepicker" id="holidayDate_edit" name="holidayDate" value="">
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Save</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Guardar</button>
                             </div>
                         </form>
                     </div>
@@ -154,8 +154,8 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete Training List</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Eliminar Día Festivo</h3>
+                            <p>¿Estás seguro de que quieres eliminarlo?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <form action="{{ route('form/holidays/delete') }}" method="POST">
@@ -163,10 +163,10 @@
                                 <input type="hidden" name="id" class="e_id" value="">
                                 <div class="row">
                                     <div class="col-6">
-                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Delete</button>
+                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Eliminar</button>
                                     </div>
                                     <div class="col-6">
-                                        <a href="#" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                        <a href="#" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                     </div>
                                 </div>
                             </form>
@@ -186,7 +186,7 @@
             var _this = $(this).parents('tr');
             $('#e_id').val(_this.find('.id').text());
             $('#holidayName_edit').val(_this.find('.holidayName').text());
-            $('#holidayDate_edit').val(_this.find('.holidayDate').text());  
+            $('#holidayDate_edit').val(_this.find('.holidayDate').text());
         });
     </script>
 

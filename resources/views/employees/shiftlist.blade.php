@@ -9,16 +9,16 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col">
-                        <h3 class="page-title">Shift List</h3>
+                        <h3 class="page-title">Lista de Turnos</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('all/employee/list') }}">Employees</a></li>
-                            <li class="breadcrumb-item active">Shift List</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Panel de Control</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('all/employee/list') }}">Empleados</a></li>
+                            <li class="breadcrumb-item active">Lista de Turnos</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn m-r-5" data-toggle="modal" data-target="#add_shift">Add Shifts</a>
-                        <a href="#" class="btn add-btn m-r-5" data-toggle="modal" data-target="#add_schedule"> Assign Shifts</a>
+                        <a href="#" class="btn add-btn m-r-5" data-toggle="modal" data-target="#add_shift">Añadir Turnos</a>
+                        <a href="#" class="btn add-btn m-r-5" data-toggle="modal" data-target="#add_schedule"> Asignar Turnos</a>
                     </div>
                 </div>
             </div>
@@ -32,33 +32,33 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Shift Name</th>
-                                    <th>Min Start Time</th>
-                                    <th>Start Time</th>
-                                    <th>Max Start Time</th>
-                                    <th>Min End Time</th>
-                                    <th>End Time</th>
-                                    <th>Max End Time</th>
-                                    <th>Break Time</th>
-                                    <th class="text-center">Status</th>
-                                    <th class="text-right no-sort">Action</th>
+                                    <th>Nombre del Turno</th>
+                                    <th>Hora de Inicio Mínima</th>
+                                    <th>Hora de Inicio</th>
+                                    <th>Hora de Inicio Máxima</th>
+                                    <th>Hora de Fin Mínima</th>
+                                    <th>Hora de Fin</th>
+                                    <th>Hora de Fin Máxima</th>
+                                    <th>Tiempo de Descanso</th>
+                                    <th class="text-center">Estado</th>
+                                    <th class="text-right no-sort">Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>10'o clock Shift</td>
+                                    <td>Turno de las 10 en punto</td>
                                     <td>09:00:00 am</td>
                                     <td>10:00:00 am</td>
                                     <td>10:30:00 am</td>
                                     <td>06:00:00 pm</td>
                                     <td>06:30:00 pm</td>
                                     <td>07:00:00 pm</td>
-                                    <td>30 mins</td>
+                                    <td>30 minutos</td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="javascript:void(0);">
-                                                <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                <i class="fa fa-dot-circle-o text-success"></i> Activo
                                             </a>
                                         </div>
                                     </td>
@@ -66,26 +66,26 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_shift"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_shift"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>10:30 shift</td>
+                                    <td>Turno de las 10:30</td>
                                     <td>10:00:00 am</td>
                                     <td>10:30:00 am	</td>
                                     <td>11:00:00 am</td>
                                     <td>06:30:00 pm</td>
                                     <td>07:00:00 pm</td>
                                     <td>07:30:00 pm	</td>
-                                    <td>45 mins</td>
+                                    <td>45 minutos</td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="javascript:void(0);">
-                                                <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                <i class="fa fa-dot-circle-o text-success"></i> Activo
                                             </a>
                                         </div>
                                     </td>
@@ -93,26 +93,26 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_shift"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_shift"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td>Daily Rout</td>
+                                    <td>Ruta Diaria</td>
                                     <td>06:00:00 am</td>
                                     <td>06:30:00 am</td>
                                     <td>07:00:00 am</td>
                                     <td>03:00:00 pm</td>
                                     <td>03:30:00 pm</td>
                                     <td>04:00:00 pm</td>
-                                    <td>60 mins</td>
+                                    <td>60 minutos</td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="javascript:void(0);">
-                                                <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                <i class="fa fa-dot-circle-o text-success"></i> Activo
                                             </a>
                                         </div>
                                     </td>
@@ -120,26 +120,26 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_shift"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_shift"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
-                                    <td>New Shift</td>
+                                    <td>Nuevo Turno</td>
                                     <td>06:11:00 am</td>
                                     <td>06:30:00 am</td>
                                     <td>08:12:00 am</td>
                                     <td>09:12:00 pm	</td>
                                     <td>09:30:00 pm</td>
                                     <td>09:45:00 pm</td>
-                                    <td>45 mins</td>
+                                    <td>45 minutos</td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="javascript:void(0);">
-                                                <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                <i class="fa fa-dot-circle-o text-success"></i> Activo
                                             </a>
                                         </div>
                                     </td>
@@ -147,26 +147,26 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_shift"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_shift"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
-                                    <td>Recurring Shift</td>
+                                    <td>Turno Recurrente</td>
                                     <td>08:30:00 am</td>
                                     <td>09:00:00 am</td>
                                     <td>09:30:00 am</td>
                                     <td>05:30:00 pm</td>
                                     <td>06:00:00 pm</td>
                                     <td>06:30:00 pm</td>
-                                    <td>60 mins</td>
+                                    <td>60 minutos</td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="javascript:void(0);">
-                                                <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                <i class="fa fa-dot-circle-o text-success"></i> Activo
                                             </a>
                                         </div>
                                     </td>
@@ -174,8 +174,8 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_shift"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_shift"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -196,7 +196,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Shift</h5>
+                        <h5 class="modal-title">Añadir Turno</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -206,7 +206,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="col-form-label">Shift Name <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Nombre del Turno <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -214,7 +214,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group" >
-                                        <label>Min Start Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Inicio Mínima <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -222,7 +222,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Start Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Inicio <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>									
@@ -230,7 +230,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Max Start Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Inicio Máxima <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>											
@@ -238,7 +238,7 @@
                                 </div>		
                                 <div class="col-md-4">
                                     <div class="form-group" >
-                                        <label>Min End Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Fin Mínima <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -246,7 +246,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>End Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Fin <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>									
@@ -254,7 +254,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Max End Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Fin Máxima <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>											
@@ -262,19 +262,19 @@
                                 </div>	
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Break Time (In Minutes) </label>
+                                        <label>Tiempo de Descanso (En Minutos) </label>
                                         <input type="text" class="form-control">											
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                        <label class="custom-control-label" for="customCheck1">Recurring Shift</label>
+                                        <label class="custom-control-label" for="customCheck1">Turno Recurrente</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="col-form-label">Repeat Every</label>
+                                        <label class="col-form-label">Repetir Cada</label>
                                         <select class="select">
                                             <option value="">1 </option>
                                             <option value="1">2</option>
@@ -283,54 +283,54 @@
                                             <option  selected value="4">5</option>
                                             <option value="3">6</option>
                                         </select>
-                                        <label class="col-form-label">Week(s)</label>
+                                        <label class="col-form-label">Semana(s)</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group wday-box">
-                                        <label class="checkbox-inline"><input type="checkbox" value="monday" class="days recurring" checked=""><span class="checkmark">M</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="monday" class="days recurring" checked=""><span class="checkmark">L</span></label>
     
-                                        <label class="checkbox-inline"><input type="checkbox" value="tuesday" class="days recurring" checked=""><span class="checkmark">T</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="tuesday" class="days recurring" checked=""><span class="checkmark">M</span></label>
                                     
-                                        <label class="checkbox-inline"><input type="checkbox" value="wednesday" class="days recurring" checked=""><span class="checkmark">W</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="wednesday" class="days recurring" checked=""><span class="checkmark">X</span></label>
                                     
-                                        <label class="checkbox-inline"><input type="checkbox" value="thursday" class="days recurring" checked=""><span class="checkmark">T</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="thursday" class="days recurring" checked=""><span class="checkmark">J</span></label>
                                     
-                                        <label class="checkbox-inline"><input type="checkbox" value="friday" class="days recurring" checked=""><span class="checkmark">F</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="friday" class="days recurring" checked=""><span class="checkmark">V</span></label>
                                     
                                         <label class="checkbox-inline"><input type="checkbox" value="saturday" class="days recurring"><span class="checkmark">S</span></label>
                                     
-                                        <label class="checkbox-inline"><input type="checkbox" value="sunday" class="days recurring"><span class="checkmark">S</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="sunday" class="days recurring"><span class="checkmark">D</span></label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="col-form-label">End On <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Termina el <span class="text-danger">*</span></label>
                                         <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                        <label class="custom-control-label" for="customCheck2">Indefinite</label>
+                                        <label class="custom-control-label" for="customCheck2">Indefinido</label>
                                     </div>
                                 </div>								
                         
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Add Tag </label>
+                                        <label>Añadir Etiqueta </label>
                                         <input type="text" class="form-control">											
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Add Note </label>
+                                        <label>Añadir Nota </label>
                                         <textarea class="form-control"></textarea>											
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Submit</button>
+                                <button class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -344,7 +344,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Shift</h5>
+                        <h5 class="modal-title">Editar Turno</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -354,7 +354,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="col-form-label">Shift Name <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Nombre del Turno <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -362,7 +362,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group" >
-                                        <label>Min Start Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Inicio Mínima <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -370,7 +370,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Start Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Inicio <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>									
@@ -378,7 +378,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Max Start Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Inicio Máxima <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>											
@@ -386,7 +386,7 @@
                                 </div>		
                                 <div class="col-md-4">
                                     <div class="form-group" >
-                                        <label>Min End Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Fin Mínima <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -394,7 +394,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>End Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Fin <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>									
@@ -402,7 +402,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Max End Time <span class="text-danger">*</span></label>
+                                        <label>Hora de Fin Máxima <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>											
@@ -410,19 +410,19 @@
                                 </div>	
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Break Time (In Minutes) </label>
+                                        <label>Tiempo de Descanso (En Minutos) </label>
                                         <input type="text" class="form-control">											
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                        <label class="custom-control-label" for="customCheck3">Recurring Shift</label>
+                                        <label class="custom-control-label" for="customCheck3">Turno Recurrente</label>
                                         </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="col-form-label">Repeat Every</label>
+                                        <label class="col-form-label">Repetir Cada</label>
                                         <select class="select">
                                             <option value="">1 </option>
                                             <option value="1">2</option>
@@ -431,54 +431,54 @@
                                             <option  selected value="4">5</option>
                                             <option value="3">6</option>
                                         </select>
-                                        <label class="col-form-label">Week(s)</label>
+                                        <label class="col-form-label">Semana(s)</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group wday-box">
-                                        <label class="checkbox-inline"><input type="checkbox" value="monday" class="days recurring" checked=""><span class="checkmark">M</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="monday" class="days recurring" checked=""><span class="checkmark">L</span></label>
     
-                                        <label class="checkbox-inline"><input type="checkbox" value="tuesday" class="days recurring" checked=""><span class="checkmark">T</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="tuesday" class="days recurring" checked=""><span class="checkmark">M</span></label>
                                     
-                                        <label class="checkbox-inline"><input type="checkbox" value="wednesday" class="days recurring" checked=""><span class="checkmark">W</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="wednesday" class="days recurring" checked=""><span class="checkmark">X</span></label>
                                     
-                                        <label class="checkbox-inline"><input type="checkbox" value="thursday" class="days recurring" checked=""><span class="checkmark">T</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="thursday" class="days recurring" checked=""><span class="checkmark">J</span></label>
                                     
-                                        <label class="checkbox-inline"><input type="checkbox" value="friday" class="days recurring" checked=""><span class="checkmark">F</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="friday" class="days recurring" checked=""><span class="checkmark">V</span></label>
                                     
                                         <label class="checkbox-inline"><input type="checkbox" value="saturday" class="days recurring"><span class="checkmark">S</span></label>
                                     
-                                        <label class="checkbox-inline"><input type="checkbox" value="sunday" class="days recurring"><span class="checkmark">S</span></label>
+                                        <label class="checkbox-inline"><input type="checkbox" value="sunday" class="days recurring"><span class="checkmark">D</span></label>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="col-form-label">End On <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Termina el <span class="text-danger">*</span></label>
                                         <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                        <label class="custom-control-label" for="customCheck4">Indefinite</label>
+                                        <label class="custom-control-label" for="customCheck4">Indefinido</label>
                                         </div>
                                 </div>								
                         
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Add Tag </label>
+                                        <label>Añadir Etiqueta </label>
                                         <input type="text" class="form-control">											
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Add Note </label>
+                                        <label>Añadir Nota </label>
                                         <textarea class="form-control"></textarea>											
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Submit</button>
+                                <button class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -492,7 +492,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Schedule</h5>
+                        <h5 class="modal-title">Añadir Horario</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -502,22 +502,22 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Department <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Departamento <span class="text-danger">*</span></label>
                                         <select class="select">
-                                            <option value="">Select</option>
-                                            <option value="">Development</option>
-                                            <option value="1">Finance</option>
-                                            <option value="2">Finance and Management</option>
-                                            <option value="3">Hr & Finance</option>
+                                            <option value="">Seleccionar</option>
+                                            <option value="">Desarrollo</option>
+                                            <option value="1">Finanzas</option>
+                                            <option value="2">Finanzas y Gestión</option>
+                                            <option value="3">RRHH y Finanzas</option>
                                             <option value="4">ITech</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Employee Name <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Nombre del Empleado <span class="text-danger">*</span></label>
                                         <select class="select">
-                                            <option value="">Select </option>
+                                            <option value="">Seleccionar </option>
                                             <option value="1">Richard Miles </option>
                                             <option value="2">John Smith</option>
                                             <option value="3">Mike Litorus </option>
@@ -527,25 +527,25 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Date</label>
+                                        <label class="col-form-label">Fecha</label>
                                         <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Shifts <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Turnos <span class="text-danger">*</span></label>
                                         <select class="select">
-                                            <option value="">Select </option>
-                                            <option value="1">10'o clock Shift</option>
-                                            <option value="2">10:30 shift</option>
-                                            <option value="3">Daily Shift </option>
-                                            <option value="4">New Shift</option>
+                                            <option value="">Seleccionar </option>
+                                            <option value="1">Turno de las 10 en punto</option>
+                                            <option value="2">Turno de las 10:30</option>
+                                            <option value="3">Turno Diario </option>
+                                            <option value="4">Nuevo Turno</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <label class="col-form-label">Min Start Time  <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Hora de Inicio Mínima  <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -553,7 +553,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <label class="col-form-label">Start Time  <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Hora de Inicio  <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -561,7 +561,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <label class="col-form-label">Max Start Time  <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Hora de Inicio Máxima  <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -569,7 +569,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <label class="col-form-label">Min End Time  <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Hora de Fin Mínima  <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -577,7 +577,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <label class="col-form-label">End Time   <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Hora de Fin   <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -585,7 +585,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <label class="col-form-label">Max End Time <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Hora de Fin Máxima <span class="text-danger">*</span></label>
                                         <div class="input-group time timepicker">
                                             <input class="form-control"><span class="input-group-append input-group-addon"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></span>
                                         </div>
@@ -593,13 +593,13 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <div class="form-group">
-                                        <label class="col-form-label">Break Time  <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Tiempo de Descanso  <span class="text-danger">*</span></label>
                                         <input class="form-control" type="text">
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="col-form-label">Accept Extra Hours </label>
+                                        <label class="col-form-label">Aceptar Horas Extra </label>
                                         <div class="custom-control custom-switch">
                                             <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
                                             <label class="custom-control-label" for="customSwitch1"></label>
@@ -608,7 +608,7 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="col-form-label">Publish </label>
+                                        <label class="col-form-label">Publicar </label>
                                         <div class="custom-control custom-switch">
                                             <input type="checkbox" class="custom-control-input" id="customSwitch2" checked="">
                                             <label class="custom-control-label" for="customSwitch2"></label>
@@ -618,7 +618,7 @@
                             </div>
                         
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Submit</button>
+                                <button class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -633,16 +633,16 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete Shift</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Eliminar Turno</h3>
+                            <p>¿Estás seguro de que quieres eliminar?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Eliminar</a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                 </div>
                             </div>
                         </div>

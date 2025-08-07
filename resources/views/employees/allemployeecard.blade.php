@@ -14,14 +14,14 @@
             <div class="page-header">
                 <div class="row align-lists-center">
                     <div class="col">
-                        <h3 class="page-title">Employee</h3>
+                        <h3 class="page-title">Empleado</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Employee</li>
+                            <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Empleado</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Add Employee</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Añadir Empleado</a>
                         <div class="view-icons">
                             <a href="{{ route('all/employee/card') }}" class="grid-view btn btn-link active"><i class="fa fa-th"></i></a>
                             <a href="{{ route('all/employee/list') }}" class="list-view btn btn-link"><i class="fa fa-bars"></i></a>
@@ -35,31 +35,31 @@
             <form action="{{ route('all/employee/search') }}" method="POST">
                 @csrf
                 <div class="row filter-row">
-                    <div class="col-sm-6 col-md-3">  
+                    <div class="col-sm-6 col-md-3">
                         <div class="form-group form-focus">
                             <input type="text" class="form-control floating" name="employee_id">
-                            <label class="focus-label">Employee ID</label>
+                            <label class="focus-label">ID de Empleado</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">  
+                    <div class="col-sm-6 col-md-3">
                         <div class="form-group form-focus">
                             <input type="text" class="form-control floating" name="name">
-                            <label class="focus-label">Employee Name</label>
+                            <label class="focus-label">Nombre del Empleado</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3"> 
+                    <div class="col-sm-6 col-md-3">
                         <div class="form-group form-focus">
                             <input type="text" class="form-control floating" name="position">
-                            <label class="focus-label">Position</label>
+                            <label class="focus-label">Cargo</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">  
-                        <button type="sumit" class="btn btn-success btn-block"> Search </button>  
+                    <div class="col-sm-6 col-md-3">
+                        <button type="sumit" class="btn btn-success btn-block"> Buscar </button>
                     </div>
                 </div>
             </form>
             <!-- Search Filter -->
-              
+
             <div class="row staff-grid-row">
                 @foreach ($users as $lists )
                 <div class="col-md-4 col-sm-6 col-12 col-lg-4 col-xl-3">
@@ -72,8 +72,8 @@
                         <div class="dropdown profile-action">
                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="{{ url('all/employee/view/edit/'.$lists->user_id) }}"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                <a class="dropdown-item" href="{{url('all/employee/delete/'.$lists->user_id)}}"onclick="return confirm('Are you sure to want to delete it?')"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                <a class="dropdown-item" href="{{ url('all/employee/view/edit/'.$lists->user_id) }}"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                <a class="dropdown-item" href="{{url('all/employee/delete/'.$lists->user_id)}}"onclick="return confirm('¿Estás seguro de que quieres eliminarlo?')"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                             </div>
                         </div>
                         <h4 class="user-name m-t-10 mb-0 text-ellipsis"><a href="profile.html">{{ $lists->name }}</a></h4>
@@ -90,7 +90,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Employee</h5>
+                        <h5 class="modal-title">Añadir Empleado</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -101,25 +101,25 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Full Name</label>
+                                        <label class="col-form-label">Nombre Completo</label>
                                         <select class="select select2s-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" id="name" name="name">
-                                            <option value="">-- Select --</option>
+                                            <option value="">-- Seleccionar --</option>
                                             @foreach ($userList as $key=>$user )
                                                 <option value="{{ $user->name }}" data-employee_id={{ $user->user_id }} data-email={{ $user->email }}>{{ $user->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
-                            
+
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Email <span class="text-danger">*</span></label>
-                                        <input class="form-control" type="email" id="email" name="email" placeholder="Auto email" readonly>
+                                        <label class="col-form-label">Correo Electrónico <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="email" id="email" name="email" placeholder="Correo automático" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Birth Date</label>
+                                        <label>Fecha de Nacimiento</label>
                                         <div class="cal-icon">
                                             <input class="form-control datetimepicker" type="text" id="birth_date" name="birth_date">
                                         </div>
@@ -127,24 +127,24 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Gender</label>
+                                        <label>Género</label>
                                         <select class="select form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" id="gender" name="gender">
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
+                                            <option value="male">Masculino</option>
+                                            <option value="female">Femenino</option>
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">  
-                                    <div class="form-group">
-                                        <label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="employee_id" name="employee_id" placeholder="Auto id employee" readonly>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Line Manager</label>
+                                        <label class="col-form-label">ID de Empleado <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="employee_id" name="employee_id" placeholder="ID de empleado automático" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="col-form-label">Gerente de Línea</label>
                                         <select class="select select2s-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" id="line_manager" name="line_manager">
-                                            <option selected disabled>-- Select --</option>
+                                            <option selected disabled>-- Seleccionar --</option>
                                             @foreach ($userList as $key=>$user )
                                                 <option value="{{ $user->name }}">{{ $user->name }}</option>
                                             @endforeach
@@ -156,13 +156,13 @@
                                 <table class="table table-striped custom-table">
                                     <thead>
                                         <tr>
-                                            <th>Module Permission</th>
-                                            <th class="text-center">Read</th>
-                                            <th class="text-center">Write</th>
-                                            <th class="text-center">Create</th>
-                                            <th class="text-center">Delete</th>
-                                            <th class="text-center">Import</th>
-                                            <th class="text-center">Export</th>
+                                            <th>Permiso del Módulo</th>
+                                            <th class="text-center">Leer</th>
+                                            <th class="text-center">Escribir</th>
+                                            <th class="text-center">Crear</th>
+                                            <th class="text-center">Eliminar</th>
+                                            <th class="text-center">Importar</th>
+                                            <th class="text-center">Exportar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -205,7 +205,7 @@
                                 </table>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Submit</button>
+                                <button class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -213,7 +213,7 @@
             </div>
         </div>
         <!-- /Add Employee Modal -->
-        
+
     </div>
     <!-- /Page Wrapper -->
     @section('script')

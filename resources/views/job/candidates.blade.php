@@ -8,15 +8,15 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Candidates List</h3>
+                        <h3 class="page-title">Lista de Candidatos</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item">Jobs</li>
-                            <li class="breadcrumb-item active">Candidates List</li>
+                            <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                            <li class="breadcrumb-item">Trabajos</li>
+                            <li class="breadcrumb-item active">Lista de Candidatos</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" data-toggle="modal" data-target="#add_employee" class="btn add-btn"> Add Candidates</a>
+                        <a href="#" data-toggle="modal" data-target="#add_employee" class="btn add-btn"> Añadir Candidatos</a>
                     </div>
                 </div>
             </div>
@@ -29,11 +29,11 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Name</th>
-                                    <th>Mobile Number</th>
-                                    <th>Email</th>
-                                    <th>Created Date</th>
-                                    <th class="text-center">Action</th>
+                                    <th>Nombre</th>
+                                    <th>Número de Móvil</th>
+                                    <th>Correo Electrónico</th>
+                                    <th>Fecha de Creación</th>
+                                    <th class="text-center">Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -47,13 +47,13 @@
                                     </td>
                                     <td>9876543210</td>
                                     <td>johndoe@example.com</td>
-                                    <td>1 Jan 2013</td>
+                                    <td>1 Ene 2013</td>
                                     <td class="text-center">
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_job"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_job"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -73,8 +73,8 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_job"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_job"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -89,13 +89,13 @@
                                     </td>
                                     <td>9876543210</td>
                                     <td>johnsmith@example.com</td>
-                                    <td>1 Apr 2014</td>
+                                    <td>1 Abr 2014</td>
                                     <td class="text-center">
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_job"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_job"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -113,7 +113,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Candidates</h5>
+                        <h5 class="modal-title">Añadir Candidatos</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -123,39 +123,39 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">First Name <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Nombre <span class="text-danger">*</span></label>
                                         <input class="form-control" type="text">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Last Name</label>
+                                        <label class="col-form-label">Apellido</label>
                                         <input class="form-control" type="text">
                                     </div>
                                 </div>
                                 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Email <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Correo Electrónico <span class="text-danger">*</span></label>
                                         <input class="form-control" type="email">
                                     </div>
                                 </div>
                                 
                                 <div class="col-sm-6">  
                                     <div class="form-group">
-                                        <label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">ID de Empleado <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">  
                                     <div class="form-group">
-                                        <label class="col-form-label">Created Date <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Fecha de Creación <span class="text-danger">*</span></label>
                                         <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Phone </label>
+                                        <label class="col-form-label">Teléfono </label>
                                         <input class="form-control" type="text">
                                     </div>
                                 </div>
@@ -163,7 +163,7 @@
                             </div>
                             
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Submit</button>
+                                <button class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -177,7 +177,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Candidates</h5>
+                        <h5 class="modal-title">Editar Candidatos</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -187,46 +187,46 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">First Name <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Nombre <span class="text-danger">*</span></label>
                                         <input class="form-control" type="text">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Last Name</label>
+                                        <label class="col-form-label">Apellido</label>
                                         <input class="form-control" type="text">
                                     </div>
                                 </div>
                                 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Email <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Correo Electrónico <span class="text-danger">*</span></label>
                                         <input class="form-control" type="email">
                                     </div>
                                 </div>
                                 
                                 <div class="col-sm-6">  
                                     <div class="form-group">
-                                        <label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">ID de Empleado <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">  
                                     <div class="form-group">
-                                        <label class="col-form-label">Created Date <span class="text-danger">*</span></label>
+                                        <label class="col-form-label">Fecha de Creación <span class="text-danger">*</span></label>
                                         <div class="cal-icon"><input class="form-control datetimepicker" type="text"></div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Phone </label>
+                                        <label class="col-form-label">Teléfono </label>
                                         <input class="form-control" type="text">
                                     </div>
                                 </div>
                                 
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Save</button>
+                                <button class="btn btn-primary submit-btn">Guardar</button>
                             </div>
                         </form>
                     </div>
@@ -241,16 +241,16 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Eliminar</h3>
+                            <p>¿Estás seguro de que quieres eliminar?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Eliminar</a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                 </div>
                             </div>
                         </div>

@@ -1,36 +1,36 @@
 
 @extends('layouts.master')
 @section('content')
-  
+
     <!-- Page Wrapper -->
     <div class="page-wrapper">
         <div class="content container-fluid">
-        
+
             <!-- Page Header -->
             <div class="page-header">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h3 class="page-title">Attendance</h3>
+                        <h3 class="page-title">Asistencia</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Attendance</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Asistencia</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <!-- /Page Header -->
-            
+
             <!-- Search Filter -->
             <div class="row filter-row">
-                <div class="col-sm-6 col-md-3">  
+                <div class="col-sm-6 col-md-3">
                     <div class="form-group form-focus">
                         <input type="text" class="form-control floating">
-                        <label class="focus-label">Employee Name</label>
+                        <label class="focus-label">Nombre del Empleado</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3"> 
+                <div class="col-sm-6 col-md-3">
                     <div class="form-group form-focus select-focus">
-                        <select class="select floating"> 
+                        <select class="select floating">
                             <option>-</option>
                             <option>Jan</option>
                             <option>Feb</option>
@@ -45,12 +45,12 @@
                             <option>Nov</option>
                             <option>Dec</option>
                         </select>
-                        <label class="focus-label">Select Month</label>
+                        <label class="focus-label">Seleccionar Mes</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3"> 
+                <div class="col-sm-6 col-md-3">
                     <div class="form-group form-focus select-focus">
-                        <select class="select floating"> 
+                        <select class="select floating">
                             <option>-</option>
                             <option>2019</option>
                             <option>2018</option>
@@ -58,22 +58,22 @@
                             <option>2016</option>
                             <option>2015</option>
                         </select>
-                        <label class="focus-label">Select Year</label>
+                        <label class="focus-label">Seleccionar Año</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">  
-                    <a href="#" class="btn btn-success btn-block"> Search </a>  
-                </div>     
+                <div class="col-sm-6 col-md-3">
+                    <a href="#" class="btn btn-success btn-block"> Buscar </a>
+                </div>
             </div>
             <!-- /Search Filter -->
-            
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="table-responsive">
                         <table class="table table-striped custom-table table-nowrap mb-0">
                             <thead>
                                 <tr>
-                                    <th>Employee</th>
+                                    <th>Empleado</th>
                                     <th>1</th>
                                     <th>2</th>
                                     <th>3</th>
@@ -122,7 +122,7 @@
                                     <td><a href="javascript:void(0);" data-toggle="modal" data-target="#attendance_info"><i class="fa fa-check text-success"></i></a></td>
                                     <td>
                                         <div class="half-day">
-                                            <span class="first-off"><a href="javascript:void(0);" data-toggle="modal" data-target="#attendance_info"><i class="fa fa-check text-success"></i></a></span> 
+                                            <span class="first-off"><a href="javascript:void(0);" data-toggle="modal" data-target="#attendance_info"><i class="fa fa-check text-success"></i></a></span>
                                             <span class="first-off"><i class="fa fa-close text-danger"></i></span>
                                         </div>
                                     </td>
@@ -141,7 +141,7 @@
                                     <td><a href="javascript:void(0);" data-toggle="modal" data-target="#attendance_info"><i class="fa fa-check text-success"></i></a></td>
                                     <td>
                                         <div class="half-day">
-                                            <span class="first-off"><i class="fa fa-close text-danger"></i></span> 
+                                            <span class="first-off"><i class="fa fa-close text-danger"></i></span>
                                             <span class="first-off"><a href="javascript:void(0);" data-toggle="modal" data-target="#attendance_info"><i class="fa fa-check text-success"></i></a></span>
                                         </div>
                                     </td>
@@ -510,7 +510,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Attendance Info</h5>
+                        <h5 class="modal-title">Información de Asistencia</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -520,9 +520,9 @@
                             <div class="col-md-6">
                                 <div class="card punch-status">
                                     <div class="card-body">
-                                        <h5 class="card-title">Timesheet <small class="text-muted">11 Mar 2019</small></h5>
+                                        <h5 class="card-title">Hoja de Horas <small class="text-muted">11 Mar 2019</small></h5>
                                         <div class="punch-det">
-                                            <h6>Punch In at</h6>
+                                            <h6>Hora de Entrada</h6>
                                             <p>Wed, 11th Mar 2019 10.00 AM</p>
                                         </div>
                                         <div class="punch-info">
@@ -531,20 +531,20 @@
                                             </div>
                                         </div>
                                         <div class="punch-det">
-                                            <h6>Punch Out at</h6>
+                                            <h6>Hora de Salida</h6>
                                             <p>Wed, 20th Feb 2019 9.00 PM</p>
                                         </div>
                                         <div class="statistics">
                                             <div class="row">
                                                 <div class="col-md-6 col-6 text-center">
                                                     <div class="stats-box">
-                                                        <p>Break</p>
+                                                        <p>Descanso</p>
                                                         <h6>1.21 hrs</h6>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-6 text-center">
                                                     <div class="stats-box">
-                                                        <p>Overtime</p>
+                                                        <p>Horas Extra</p>
                                                         <h6>3 hrs</h6>
                                                     </div>
                                                 </div>
@@ -556,45 +556,45 @@
                             <div class="col-md-6">
                                 <div class="card recent-activity">
                                     <div class="card-body">
-                                        <h5 class="card-title">Activity</h5>
+                                        <h5 class="card-title">Actividad</h5>
                                         <ul class="res-activity-list">
                                             <li>
-                                                <p class="mb-0">Punch In at</p>
+                                                <p class="mb-0">Hora de Entrada</p>
                                                 <p class="res-activity-time">
                                                     <i class="fa fa-clock-o"></i>
                                                     10.00 AM.
                                                 </p>
                                             </li>
                                             <li>
-                                                <p class="mb-0">Punch Out at</p>
+                                                <p class="mb-0">Hora de Salida</p>
                                                 <p class="res-activity-time">
                                                     <i class="fa fa-clock-o"></i>
                                                     11.00 AM.
                                                 </p>
                                             </li>
                                             <li>
-                                                <p class="mb-0">Punch In at</p>
+                                                <p class="mb-0">Hora de Entrada</p>
                                                 <p class="res-activity-time">
                                                     <i class="fa fa-clock-o"></i>
                                                     11.15 AM.
                                                 </p>
                                             </li>
                                             <li>
-                                                <p class="mb-0">Punch Out at</p>
+                                                <p class="mb-0">Hora de Salida</p>
                                                 <p class="res-activity-time">
                                                     <i class="fa fa-clock-o"></i>
                                                     1.30 PM.
                                                 </p>
                                             </li>
                                             <li>
-                                                <p class="mb-0">Punch In at</p>
+                                                <p class="mb-0">Hora de Entrada</p>
                                                 <p class="res-activity-time">
                                                     <i class="fa fa-clock-o"></i>
                                                     2.00 PM.
                                                 </p>
                                             </li>
                                             <li>
-                                                <p class="mb-0">Punch Out at</p>
+                                                <p class="mb-0">Hora de Salida</p>
                                                 <p class="res-activity-time">
                                                     <i class="fa fa-clock-o"></i>
                                                     7.30 PM.

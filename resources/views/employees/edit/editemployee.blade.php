@@ -13,81 +13,81 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Employee View</h3>
+                        <h3 class="page-title">Vista de Empleado</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Employee View Edit</li>
+                            <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Editar Vista de Empleado</li>
                         </ul>
                     </div>
                 </div>
             </div>
 			<!-- /Page Header -->
-              
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title mb-0">Employee edit</h4>
+                            <h4 class="card-title mb-0">Editar Empleado</h4>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('all/employee/update') }}" method="POST">
                                 @csrf
                                 <input type="hidden" class="form-control" id="id" name="id" value="{{ $employees[0]->id }}">
                                 <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Full Name</label>
+                                    <label class="col-form-label col-md-2">Nombre Completo</label>
                                     <div class="col-md-10">
                                         <input type="text" class="form-control" id="name" name="name" value="{{ $employees[0]->name }}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Email</label>
+                                    <label class="col-form-label col-md-2">Correo Electrónico</label>
                                     <div class="col-md-10">
                                         <input type="email" class="form-control" id="email" name="email" value="{{ $employees[0]->email }}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Birth Date</label>
+                                    <label class="col-form-label col-md-2">Fecha de Nacimiento</label>
                                     <div class="col-md-10">
                                         <input type="text" class="form-control datetimepicker" id="birth_date" name="birth_date" value="{{ $employees[0]->birth_date }}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Gender</label>
+                                    <label class="col-form-label col-md-2">Género</label>
                                     <div class="col-md-10">
                                         <select class="select form-control" id="gender" name="gender">
                                             <option value="{{ $employees[0]->gender }}" {{ ( $employees[0]->gender == $employees[0]->gender) ? 'selected' : '' }}>{{ $employees[0]->gender }} </option>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
+                                            <option value="Male">Masculino</option>
+                                            <option value="Female">Femenino</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Employee ID</label>
+                                    <label class="col-form-label col-md-2">ID de Empleado</label>
                                     <div class="col-md-10">
                                         <input type="text" class="form-control" id="employee_id" name="employee_id" value="{{ $employees[0]->employee_id }}" readonly>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Line Manager</label>
+                                    <label class="col-form-label col-md-2">Gerente de Línea</label>
                                     <div class="col-md-10">
                                         <input type="text" class="form-control" id="line_manager" name="line_manager" value="{{ $employees[0]->line_manager }}">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Employee Permission</label>
+                                    <label class="col-form-label col-md-2">Permisos de Empleado</label>
                                     <div class="col-md-10">
                                         <div class="table-responsive m-t-15">
                                             <table class="table table-striped custom-table">
                                                 <thead>
                                                     <tr>
-                                                        <th>Module Permission</th>
-                                                        <th class="text-center">Read</th>
-                                                        <th class="text-center">Write</th>
-                                                        <th class="text-center">Create</th>
-                                                        <th class="text-center">Delete</th>
-                                                        <th class="text-center">Import</th>
-                                                        <th class="text-center">Export</th>
+                                                        <th>Permiso del Módulo</th>
+                                                        <th class="text-center">Leer</th>
+                                                        <th class="text-center">Escribir</th>
+                                                        <th class="text-center">Crear</th>
+                                                        <th class="text-center">Eliminar</th>
+                                                        <th class="text-center">Importar</th>
+                                                        <th class="text-center">Exportar</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -134,7 +134,7 @@
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2"></label>
                                     <div class="col-md-10">
-                                        <button type="submit" class="btn btn-primary submit-btn">Update</button>
+                                        <button type="submit" class="btn btn-primary submit-btn">Actualizar</button>
                                     </div>
                                 </div>
                             </form>
@@ -144,7 +144,7 @@
             </div>
         </div>
         <!-- /Page Content -->
-        
+
     </div>
     <!-- /Page Wrapper -->
     @section('script')

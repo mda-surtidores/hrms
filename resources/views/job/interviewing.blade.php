@@ -8,12 +8,12 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h3 class="page-title">Interviewing</h3>
+                        <h3 class="page-title">Entrevistas</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item">Jobs</li>
-                            <li class="breadcrumb-item">User Dashboard</li>
-                            <li class="breadcrumb-item active">Interviewing</li>
+                            <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                            <li class="breadcrumb-item">Trabajos</li>
+                            <li class="breadcrumb-item">Panel de Usuario</li>
+                            <li class="breadcrumb-item active">Entrevistas</li>
                         </ul>
                     </div>
                 </div>
@@ -32,8 +32,8 @@
                     <div class="card">
                         <div class="card-body">
                         <ul class="nav nav-tabs nav-tabs-solid nav-justified flex-column">
-                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home">Apptitude</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1">Schedule Interview</a></li>
+                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home">Aptitud</a></li>
+                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1">Programar Entrevista</a></li>
                         </ul>
                     </div>
                 </div>
@@ -49,56 +49,56 @@
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Job Title</th>
-                                                    <th>Department</th>
-                                                    <th class="text-center">Job Type</th>
-                                                    <th class="text-center">Aptitude Test</th>
+                                                    <th>Título del Trabajo</th>
+                                                    <th>Departamento</th>
+                                                    <th class="text-center">Tipo de Trabajo</th>
+                                                    <th class="text-center">Prueba de Aptitud</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td><a href="#">Web Developer</a></td>
-                                                    <td>Development</td>
+                                                    <td><a href="#">Desarrollador Web</a></td>
+                                                    <td>Desarrollo</td>
                                                     <td class="text-center">
                                                         <div class="action-label">
                                                             <a class="btn btn-white btn-sm btn-rounded" href="#">
-                                                            <i class="fa fa-dot-circle-o text-danger"></i> Full Time
+                                                            <i class="fa fa-dot-circle-o text-danger"></i> Tiempo Completo
                                                             </a>
                                                         </div>
                                                     </td>
                                                     <td class="text-center">
-                                                        <a href="job-aptitude.html" class="btn btn-primary aptitude-btn"><span>Click Here</span></a>
+                                                        <a href="job-aptitude.html" class="btn btn-primary aptitude-btn"><span>Haga Clic Aquí</span></a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td><a href="#">Web Developer</a></td>
-                                                    <td>Development</td>
+                                                    <td><a href="#">Desarrollador Web</a></td>
+                                                    <td>Desarrollo</td>
                                                     <td class="text-center">
                                                         <div class="action-label">
                                                             <a class="btn btn-white btn-sm btn-rounded" href="#">
-                                                            <i class="fa fa-dot-circle-o text-warning"></i> Part Time
+                                                            <i class="fa fa-dot-circle-o text-warning"></i> Tiempo Parcial
                                                             </a>
                                                         </div>
                                                     </td>
                                                     <td class="text-center">
-                                                        <a href="job-aptitude.html" class="btn btn-primary aptitude-btn"><span>Click Here</span></a>
+                                                        <a href="job-aptitude.html" class="btn btn-primary aptitude-btn"><span>Haga Clic Aquí</span></a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
-                                                    <td><a href="#">Web Designing</a></td>
-                                                    <td>Development</td>
+                                                    <td><a href="#">Diseño Web</a></td>
+                                                    <td>Desarrollo</td>
                                                     <td class="text-center">
                                                         <div class="action-label">
                                                             <a class="btn btn-white btn-sm btn-rounded" href="#">
-                                                            <i class="fa fa-dot-circle-o text-warning"></i> Part Time
+                                                            <i class="fa fa-dot-circle-o text-warning"></i> Tiempo Parcial
                                                             </a>
                                                         </div>
                                                     </td>
                                                     <td class="text-center">
-                                                        <a href="job-aptitude.html" class="btn btn-primary aptitude-btn"><span>Click Here</span></a>
+                                                        <a href="job-aptitude.html" class="btn btn-primary aptitude-btn"><span>Haga Clic Aquí</span></a>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -113,66 +113,66 @@
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Job Title</th>
-                                                    <th>Department</th>
-                                                    <th class="text-center">Job Type</th>
-                                                    <th class="text-center">Aptitude Test</th>
-                                                    <th class="text-center">Schedule Interview</th>
+                                                    <th>Título del Trabajo</th>
+                                                    <th>Departamento</th>
+                                                    <th class="text-center">Tipo de Trabajo</th>
+                                                    <th class="text-center">Prueba de Aptitud</th>
+                                                    <th class="text-center">Programar Entrevista</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td><a href="#">Web Developer</a></td>
-                                                    <td>Development</td>
+                                                    <td><a href="#">Desarrollador Web</a></td>
+                                                    <td>Desarrollo</td>
                                                     <td class="text-center">
                                                         <div class="action-label">
                                                             <a class="btn btn-white btn-sm btn-rounded" href="#">
-                                                            <i class="fa fa-dot-circle-o text-danger"></i> Full Time
+                                                            <i class="fa fa-dot-circle-o text-danger"></i> Tiempo Completo
                                                             </a>
                                                         </div>
                                                     </td>
                                                     <td class="text-center">
-                                                        <a href="javascript:void(0);" class="btn btn-primary disabled"><span>Selected</span></a>
+                                                        <a href="javascript:void(0);" class="btn btn-primary disabled"><span>Seleccionado</span></a>
                                                     </td>
                                                     <td class="text-center">
-                                                        <a href="javascript:void(0);" class="btn btn-primary aptitude-btn" data-toggle="modal" data-target="#selectMyTime"><span>Select Your Time Here</span></a>
+                                                        <a href="javascript:void(0);" class="btn btn-primary aptitude-btn" data-toggle="modal" data-target="#selectMyTime"><span>Seleccione su Hora Aquí</span></a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td><a href="#">Web Designing</a></td>
-                                                    <td>Development</td>
+                                                    <td><a href="#">Diseño Web</a></td>
+                                                    <td>Desarrollo</td>
                                                     <td class="text-center">
                                                         <div class="action-label">
                                                             <a class="btn btn-white btn-sm btn-rounded" href="#">
-                                                            <i class="fa fa-dot-circle-o text-warning"></i> Part Time
+                                                            <i class="fa fa-dot-circle-o text-warning"></i> Tiempo Parcial
                                                             </a>
                                                         </div>
                                                     </td>
                                                     <td class="text-center">
-                                                        <a href="javascript:void(0);" class="btn btn-primary disabled"><span>Selected</span></a>
+                                                        <a href="javascript:void(0);" class="btn btn-primary disabled"><span>Seleccionado</span></a>
                                                     </td>
                                                     <td class="text-center">
-                                                        <a href="javascript:void(0);" class="btn btn-primary aptitude-btn" data-toggle="modal" data-target="#selectMyTime"><span>Select Your Time Here</span></a>
+                                                        <a href="javascript:void(0);" class="btn btn-primary aptitude-btn" data-toggle="modal" data-target="#selectMyTime"><span>Seleccione su Hora Aquí</span></a>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td><a href="#">Web Developer</a></td>
-                                                    <td>Development</td>
+                                                    <td><a href="#">Desarrollador Web</a></td>
+                                                    <td>Desarrollo</td>
                                                     <td class="text-center">
                                                         <div class="action-label">
                                                             <a class="btn btn-white btn-sm btn-rounded" href="#">
-                                                            <i class="fa fa-dot-circle-o text-warning"></i> Part Time
+                                                            <i class="fa fa-dot-circle-o text-warning"></i> Tiempo Parcial
                                                             </a>
                                                         </div>
                                                     </td>
                                                     <td class="text-center">
-                                                        <a href="javascript:void(0);" class="btn btn-primary disabled"><span>Selected</span></a>
+                                                        <a href="javascript:void(0);" class="btn btn-primary disabled"><span>Seleccionado</span></a>
                                                     </td>
                                                     <td class="text-center">
-                                                        <a href="javascript:void(0);" class="btn btn-primary aptitude-btn" data-toggle="modal" data-target="#selectMyTime"><span>Select Your Time Here</span></a>
+                                                        <a href="javascript:void(0);" class="btn btn-primary aptitude-btn" data-toggle="modal" data-target="#selectMyTime"><span>Seleccione su Hora Aquí</span></a>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -198,14 +198,14 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Select Your Time</h4>
+                    <h4 class="modal-title">Seleccione su Hora</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <label>Day1 <span class="text-danger">*</span></label>
+                                <label>Día 1 <span class="text-danger">*</span></label>
                                 <select class="form-control" name="designations" id="designations">
                                     <option value="">11.00am - 11.30am (24 Feb 2020) </option>
                                     <option value="">1.00pm - 1.30pm (25 Feb 2020) </option>
@@ -217,10 +217,10 @@
                     <div class="modal-btn delete-action mt-3">
                         <div class="row">
                             <div class="col-6">
-                                <button type="button" class="btn btn-primary btn-block cancel-btn">Submit</button>
+                                <button type="button" class="btn btn-primary btn-block cancel-btn">Enviar</button>
                             </div>
                             <div class="col-6">
-                                <button type="button" class="btn btn-primary btn-block cancel-btn" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary btn-block cancel-btn" data-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>

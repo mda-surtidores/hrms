@@ -8,12 +8,12 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h3 class="page-title">Applied Jobs</h3>
+                        <h3 class="page-title">Trabajos Solicitados</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item ">Jobs</li>
-                            <li class="breadcrumb-item">User Dashboard</li>
-                            <li class="breadcrumb-item active">Applied Jobs</li>
+                            <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                            <li class="breadcrumb-item ">Trabajos</li>
+                            <li class="breadcrumb-item">Panel de Usuario</li>
+                            <li class="breadcrumb-item active">Trabajos Solicitados</li>
                         </ul>
                     </div>
                 </div>
@@ -32,39 +32,39 @@
                 <div class="col-sm-6 col-md-3">  
                     <div class="form-group form-focus select-focus">
                         <select class="select floating"> 
-                            <option>Select</option>
-                            <option>Development</option>
-                            <option>Designing</option>
+                            <option>Seleccionar</option>
+                            <option>Desarrollo</option>
+                            <option>Diseño</option>
                             <option>Android</option>
                         </select>
-                        <label class="focus-label">Department</label>
+                        <label class="focus-label">Departamento</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3">  
                     <div class="form-group form-focus select-focus">
                         <select class="select floating"> 
-                            <option>Select</option>
-                            <option>Full Time</option>
-                            <option>Part Time</option>
-                            <option>Internship</option>
+                            <option>Seleccionar</option>
+                            <option>Tiempo Completo</option>
+                            <option>Tiempo Parcial</option>
+                            <option>Prácticas</option>
                         </select>
-                        <label class="focus-label">Job Type</label>
+                        <label class="focus-label">Tipo de Trabajo</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3"> 
                     <div class="form-group form-focus select-focus">
                         <select class="select floating"> 
-                            <option>Select Designation</option>
-                            <option>Web Developer</option>
-                            <option>Web Designer</option>
-                            <option>Android Developer</option>
-                            <option>Ios Developer</option>
+                            <option>Seleccionar Cargo</option>
+                            <option>Desarrollador Web</option>
+                            <option>Diseñador Web</option>
+                            <option>Desarrollador Android</option>
+                            <option>Desarrollador Ios</option>
                         </select>
-                        <label class="focus-label">Designation</label>
+                        <label class="focus-label">Cargo</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3">  
-                    <a href="#" class="btn btn-success btn-block"> Search </a>  
+                    <a href="#" class="btn btn-success btn-block"> Buscar </a>
                 </div>
             </div>
             <!-- Search Filter -->
@@ -76,33 +76,33 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Job Title</th>
-                                    <th>Department</th>
-                                    <th>Start Date</th>
-                                    <th>Expire Date</th>
-                                    <th class="text-center">Job Type</th>
-                                    <th class="text-center">Status</th>
-                                    <th class="text-center">Actions</th>
+                                    <th>Título del Trabajo</th>
+                                    <th>Departamento</th>
+                                    <th>Fecha de Inicio</th>
+                                    <th>Fecha de Vencimiento</th>
+                                    <th class="text-center">Tipo de Trabajo</th>
+                                    <th class="text-center">Estado</th>
+                                    <th class="text-center">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td><a href="job-details.html">Web Developer</a></td>
-                                    <td>Development</td>
+                                    <td><a href="job-details.html">Desarrollador Web</a></td>
+                                    <td>Desarrollo</td>
                                     <td>3 Mar 2019</td>
                                     <td>31 May 2019</td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa fa-dot-circle-o text-danger"></i> Full Time
+                                                <i class="fa fa-dot-circle-o text-danger"></i> Tiempo Completo
                                             </a>
                                         </div>
                                     </td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa fa-dot-circle-o text-danger"></i> Open
+                                                <i class="fa fa-dot-circle-o text-danger"></i> Abierto
                                             </a>
                                         </div>
                                     </td>
@@ -110,28 +110,28 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td><a href="job-details.html">Web Designer</a></td>
-                                    <td>Designing</td>
+                                    <td><a href="job-details.html">Diseñador Web</a></td>
+                                    <td>Diseño</td>
                                     <td>3 Mar 2019</td>
                                     <td>31 May 2019</td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa fa-dot-circle-o text-success"></i> Part Time
+                                                <i class="fa fa-dot-circle-o text-success"></i> Tiempo Parcial
                                             </a>
                                         </div>
                                     </td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa fa-dot-circle-o text-success"></i> Closed
+                                                <i class="fa fa-dot-circle-o text-success"></i> Cerrado
                                             </a>
                                         </div>
                                     </td>
@@ -139,28 +139,28 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td><a href="job-details.html">Android Developer</a></td>
+                                    <td><a href="job-details.html">Desarrollador Android</a></td>
                                     <td>Android</td>
                                     <td>3 Mar 2019</td>
                                     <td>31 May 2019</td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa fa-dot-circle-o text-danger"></i> Internship
+                                                <i class="fa fa-dot-circle-o text-danger"></i> Prácticas
                                             </a>
                                         </div>
                                     </td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-white btn-sm btn-rounded" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa fa-dot-circle-o text-danger"></i> Cancelled
+                                                <i class="fa fa-dot-circle-o text-danger"></i> Cancelado
                                             </a>
                                         </div>
                                     </td>
@@ -168,7 +168,7 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -190,16 +190,16 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="form-header">
-                        <h3>Delete</h3>
-                        <p>Are you sure want to delete?</p>
+                        <h3>Eliminar</h3>
+                        <p>¿Estás seguro de que quieres eliminar?</p>
                     </div>
                     <div class="modal-btn delete-action">
                         <div class="row">
                             <div class="col-6">
-                                <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                                <a href="javascript:void(0);" class="btn btn-primary continue-btn">Eliminar</a>
                             </div>
                             <div class="col-6">
-                                <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 
 @extends('layouts.master')
 @section('content')
-   
+
     <!-- Page Wrapper -->
     <div class="page-wrapper">
         <!-- Page Content -->
@@ -10,20 +10,19 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Department</h3>
+                        <h3 class="page-title">Departamento</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{route('home')}}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Department</li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Departamento</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_department"><i class="fa fa-plus"></i> Add Department</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_department"><i class="fa fa-plus"></i> Añadir Departamento</a>
                     </div>
                 </div>
             </div>
-
             <!-- /Page Header -->
-            
+
             <div class="row">
                 <div class="col-md-12">
                     <div>
@@ -31,9 +30,9 @@
                             <thead>
                                 <tr>
                                     <th style="width: 30px;">No</th>
-                                    <th>Department Name</th>
+                                    <th>Nombre del Departamento</th>
                                     <th hidden></th>
-                                    <th class="text-right">Action</th>
+                                    <th class="text-right">Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,8 +45,8 @@
                                     <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                         <div class="dropdown-menu dropdown-menu-right">
-                                            <a class="dropdown-item  edit_department" href="#" data-toggle="modal" data-target="#edit_department"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                            <a class="dropdown-item delete_department" href="#" data-toggle="modal" data-target="#delete_department"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                            <a class="dropdown-item  edit_department" href="#" data-toggle="modal" data-target="#edit_department"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                            <a class="dropdown-item delete_department" href="#" data-toggle="modal" data-target="#delete_department"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                         </div>
                                         </div>
                                     </td>
@@ -60,13 +59,13 @@
             </div>
         </div>
         <!-- /Page Content -->
-        
+
         <!-- Add Department Modal -->
         <div id="add_department" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Department</h5>
+                        <h5 class="modal-title">Añadir Departamento</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -75,7 +74,7 @@
                         <form action="{{ route('form/departments/save') }}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label>Department Name <span class="text-danger">*</span></label>
+                                <label>Nombre del Departamento <span class="text-danger">*</span></label>
                                 <input class="form-control @error('department') is-invalid @enderror" type="text" id="department" name="department">
                                 @error('department')
                                     <span class="invalid-feedback" role="alert">
@@ -84,7 +83,7 @@
                                 @enderror
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -92,13 +91,13 @@
             </div>
         </div>
         <!-- /Add Department Modal -->
-        
+
         <!-- Edit Department Modal -->
         <div id="edit_department" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Department</h5>
+                        <h5 class="modal-title">Editar Departamento</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -108,11 +107,11 @@
                             @csrf
                             <input type="hidden" name="id" id="e_id" value="">
                             <div class="form-group">
-                                <label>Department Name <span class="text-danger">*</span></label>
+                                <label>Nombre del Departamento <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="department_edit" name="department" value="">
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Save</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Guardar</button>
                             </div>
                         </form>
                     </div>
@@ -127,8 +126,8 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete Department</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Eliminar Departamento</h3>
+                            <p>¿Estás seguro de que quieres eliminarlo?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <form action="{{ route('form/department/delete') }}" method="POST">
@@ -136,10 +135,10 @@
                                 <input type="hidden" name="id" class="e_id" value="">
                                 <div class="row">
                                     <div class="col-6">
-                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Delete</button>
+                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Eliminar</button>
                                     </div>
                                     <div class="col-6">
-                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                     </div>
                                 </div>
                             </form>

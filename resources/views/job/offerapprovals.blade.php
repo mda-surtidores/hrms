@@ -8,11 +8,11 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col-12">
-                        <h3 class="page-title">Offer Approvals</h3>
+                        <h3 class="page-title">Aprobaciones de Oferta</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item">Jobs</li>
-                            <li class="breadcrumb-item active">Offer Approvals</li>
+                            <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                            <li class="breadcrumb-item">Trabajos</li>
+                            <li class="breadcrumb-item active">Aprobaciones de Oferta</li>
                         </ul>
                     </div>
                 </div>
@@ -26,14 +26,14 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Name</th>
-                                    <th>Job Title</th>
-                                    <th>Job Type</th>
-                                    <th>Pay</th>
-                                    <th>Annual IP</th>
-                                    <th>Long Term IP</th>
-                                    <th>Status</th>
-                                    <th class="text-center">Status</th>
+                                    <th>Nombre</th>
+                                    <th>Título del Trabajo</th>
+                                    <th>Tipo de Trabajo</th>
+                                    <th>Paga</th>
+                                    <th>IP Anual</th>
+                                    <th>IP a Largo Plazo</th>
+                                    <th>Estado</th>
+                                    <th class="text-center">Estado</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -42,21 +42,21 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
-                                            <a href="profile.html">John Doe <span>Web Designer</span></a>
+                                            <a href="profile.html">John Doe <span>Diseñador Web</span></a>
                                         </h2>
                                     </td>
-                                    <td><a href="job-details.html">Web Developer</a></td>
-                                    <td>Temporary</td>
+                                    <td><a href="job-details.html">Desarrollador Web</a></td>
+                                    <td>Temporal</td>
                                     <td>$25000</td>
                                     <td>15%</td>
                                     <td>No</td>
-                                    <td><label class="badge bg-inverse-warning" style="display: inline-block;min-width: 90px;">Requested</label></td>
+                                    <td><label class="badge bg-inverse-warning" style="display: inline-block;min-width: 90px;">Solicitado</label></td>
                                     <td class="text-right">
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#"><i class="fa fa-thumbs-o-up m-r-5"></i> Approved</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-ban m-r-5"></i> Rejected</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-thumbs-o-up m-r-5"></i> Aprobado</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-ban m-r-5"></i> Rechazado</a>
                                             </div>
                                         </div>
                                     </td>
@@ -66,21 +66,21 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-09.jpg"></a>
-                                            <a href="profile.html">Richard Miles <span>Web Developer</span></a>
+                                            <a href="profile.html">Richard Miles <span>Desarrollador Web</span></a>
                                         </h2>
                                     </td>
-                                    <td><a href="job-details.html">Web Designer</a></td>
-                                    <td>Contract</td>
+                                    <td><a href="job-details.html">Diseñador Web</a></td>
+                                    <td>Contrato</td>
                                     <td>$25000</td>
                                     <td>15%</td>
                                     <td>No</td>
-                                    <td><label class="badge bg-inverse-danger" style="display: inline-block;min-width: 90px;">Rejected</label></td>
+                                    <td><label class="badge bg-inverse-danger" style="display: inline-block;min-width: 90px;">Rechazado</label></td>
                                     <td class="text-right">
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#"><i class="fa fa-thumbs-o-up m-r-5"></i> Approved</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-ban m-r-5"></i> Rejected</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-thumbs-o-up m-r-5"></i> Aprobado</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-ban m-r-5"></i> Rechazado</a>
                                             </div>
                                         </div>
                                     </td>
@@ -90,21 +90,21 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-10.jpg"></a>
-                                            <a href="profile.html">John Smith <span>Android Developer</span></a>
+                                            <a href="profile.html">John Smith <span>Desarrollador Android</span></a>
                                         </h2>
                                     </td>
-                                    <td><a href="job-details.html">Android Developer</a></td>
-                                    <td>Salary</td>
+                                    <td><a href="job-details.html">Desarrollador Android</a></td>
+                                    <td>Salario</td>
                                     <td>$25000</td>
                                     <td>15%</td>
                                     <td>No</td>
-                                    <td><label class="badge bg-inverse-success" style="display: inline-block;min-width: 90px;">Approved</label></td>
+                                    <td><label class="badge bg-inverse-success" style="display: inline-block;min-width: 90px;">Aprobado</label></td>
                                     <td class="text-right">
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#"><i class="fa fa-thumbs-o-up m-r-5"></i> Approved</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-ban m-r-5"></i> Rejected</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-thumbs-o-up m-r-5"></i> Aprobado</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-ban m-r-5"></i> Rechazado</a>
                                             </div>
                                         </div>
                                     </td>
@@ -122,7 +122,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Job</h5>
+                        <h5 class="modal-title">Editar Trabajo</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -132,20 +132,20 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Title</label>
-                                        <input class="form-control" type="text" value="Web Developer">
+                                        <label>Título del Trabajo</label>
+                                        <input class="form-control" type="text" value="Desarrollador Web">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Department</label>
+                                        <label>Departamento</label>
                                         <select class="select">
                                             <option>-</option>
-                                            <option selected>Web Development</option>
-                                            <option>Application Development</option>
-                                            <option>IT Management</option>
-                                            <option>Accounts Management</option>
-                                            <option>Support Management</option>
+                                            <option selected>Desarrollo Web</option>
+                                            <option>Desarrollo de Aplicaciones</option>
+                                            <option>Gestión de TI</option>
+                                            <option>Gestión de Cuentas</option>
+                                            <option>Gestión de Soporte</option>
                                             <option>Marketing</option>
                                         </select>
                                     </div>
@@ -154,13 +154,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Location</label>
+                                        <label>Ubicación del Trabajo</label>
                                         <input class="form-control" type="text" value="California">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>No of Vacancies</label>
+                                        <label>No de Vacantes</label>
                                         <input class="form-control" type="text" value="5">
                                     </div>
                                 </div>
@@ -168,13 +168,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Experience</label>
-                                        <input class="form-control" type="text" value="2 Years">
+                                        <label>Experiencia</label>
+                                        <input class="form-control" type="text" value="2 Años">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Age</label>
+                                        <label>Edad</label>
                                         <input class="form-control" type="text" value="-">
                                     </div>
                                 </div>
@@ -182,13 +182,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Salary From</label>
+                                        <label>Salario Desde</label>
                                         <input type="text" class="form-control" value="32k">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Salary To</label>
+                                        <label>Salario Hasta</label>
                                         <input type="text" class="form-control" value="38k">
                                     </div>
                                 </div>
@@ -196,24 +196,24 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Type</label>
+                                        <label>Tipo de Trabajo</label>
                                         <select class="select">
-                                            <option selected>Full Time</option>
-                                            <option>Part Time</option>
-                                            <option>Internship</option>
-                                            <option>Temporary</option>
-                                            <option>Remote</option>
-                                            <option>Others</option>
+                                            <option selected>Tiempo Completo</option>
+                                            <option>Tiempo Parcial</option>
+                                            <option>Prácticas</option>
+                                            <option>Temporal</option>
+                                            <option>Remoto</option>
+                                            <option>Otros</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Status</label>
+                                        <label>Estado</label>
                                         <select class="select">
-                                            <option selected>Open</option>
-                                            <option>Closed</option>
-                                            <option>Cancelled</option>
+                                            <option selected>Abierto</option>
+                                            <option>Cerrado</option>
+                                            <option>Cancelado</option>
                                         </select>
                                     </div>
                                 </div>
@@ -221,13 +221,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Start Date</label>
+                                        <label>Fecha de Inicio</label>
                                         <input type="text" class="form-control datetimepicker" value="3 Mar 2019">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Expired Date</label>
+                                        <label>Fecha de Vencimiento</label>
                                         <input type="text" class="form-control datetimepicker" value="31 May 2019">
                                     </div>
                                 </div>
@@ -235,13 +235,13 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Description</label>
+                                        <label>Descripción</label>
                                         <textarea class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Save</button>
+                                <button class="btn btn-primary submit-btn">Guardar</button>
                             </div>
                         </form>
                     </div>
@@ -256,16 +256,16 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Eliminar</h3>
+                            <p>¿Estás seguro de que quieres eliminar?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Eliminar</a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                 </div>
                             </div>
                         </div>
