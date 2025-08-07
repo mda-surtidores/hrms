@@ -8,12 +8,12 @@
         <div class="page-header">
             <div class="row">
                 <div class="col-sm-12">
-                    <h3 class="page-title">User Job Dashboard</h3>
+                    <h3 class="page-title">Panel de Trabajo del Usuario</h3>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{route('home')}}">Dashboard</a></li>
-                        <li class="breadcrumb-item">Jobs</li>
-                        <li class="breadcrumb-item">User Dashboard</li>
-                        <li class="breadcrumb-item">User Dashboard</li>
+                        <li class="breadcrumb-item"><a href="{{route('home')}}">Panel de Control</a></li>
+                        <li class="breadcrumb-item">Trabajos</li>
+                        <li class="breadcrumb-item">Panel de Usuario</li>
+                        <li class="breadcrumb-item">Panel de Usuario</li>
                     </ul>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                         <span class="dash-widget-icon"><i class="fa fa-file-text-o"></i></span>
                         <div class="dash-widget-info">
                             <h3>110</h3>
-                            <span>Offered</span>
+                            <span>Ofrecido</span>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                         <span class="dash-widget-icon"><i class="fa fa-clipboard"></i></span>
                         <div class="dash-widget-info">
                             <h3>40</h3>
-                            <span>Applied</span>
+                            <span>Aplicado</span>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                         <span class="dash-widget-icon"><i class="fa fa-retweet"></i></span>
                         <div class="dash-widget-info">
                             <h3>374</h3>
-                            <span>Visited</span>
+                            <span>Visitado</span>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                         <span class="dash-widget-icon"><i class="fa fa-floppy-o"></i></span>
                         <div class="dash-widget-info">
                             <h3>220</h3>
-                            <span>Saved</span>
+                            <span>Guardado</span>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                     <div class="col-md-6 text-center d-flex">
                         <div class="card flex-fill">
                             <div class="card-body">
-                                <h3 class="card-title">Overview</h3>
+                                <h3 class="card-title">Visión General</h3>
                                 <canvas id="lineChart"></canvas>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                     <div class="col-md-6 d-flex">
                         <div class="card flex-fill">
                             <div class="card-body">
-                                <h3 class="card-title text-center">Latest Jobs</h3>
+                                <h3 class="card-title text-center">Últimos Trabajos</h3>
                                 <ul class="list-group">
                                     @foreach ($job_list as $key => $items)
                                     @php
@@ -110,7 +110,7 @@
             <div class="col-md-12">
                 <div class="card card-table">
                     <div class="card-header">
-                        <h3 class="card-title mb-0">Offered Jobs</h3>
+                        <h3 class="card-title mb-0">Trabajos Ofrecidos</h3>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -118,10 +118,10 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Job Title</th>
-                                        <th>Department</th>
-                                        <th class="text-center">Job Type</th>
-                                        <th class="text-center">Actions</th>
+                                        <th>Título del Trabajo</th>
+                                        <th>Departamento</th>
+                                        <th class="text-center">Tipo de Trabajo</th>
+                                        <th class="text-center">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -138,7 +138,7 @@
                                             </div>
                                         </td>
                                         <td class="text-center">
-                                            <a href="#" class="btn btn-sm btn-info download-offer"><span><i class="fa fa-download mr-1"></i> Download Offer</span></a>
+                                            <a href="#" class="btn btn-sm btn-info download-offer"><span><i class="fa fa-download mr-1"></i> Descargar Oferta</span></a>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -154,7 +154,7 @@
             <div class="col-md-12">
                 <div class="card card-table">
                     <div class="card-header">
-                        <h3 class="card-title mb-0">Applied Jobs</h3>
+                        <h3 class="card-title mb-0">Trabajos Aplicados</h3>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -162,13 +162,13 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Job Title</th>
-                                        <th>Department</th>
-                                        <th>Start Date</th>
-                                        <th>Expire Date</th>
-                                        <th class="text-center">Job Type</th>
-                                        <th class="text-center">Status</th>
-                                        <th class="text-center">Actions</th>
+                                        <th>Título del Trabajo</th>
+                                        <th>Departamento</th>
+                                        <th>Fecha de Inicio</th>
+                                        <th>Fecha de Vencimiento</th>
+                                        <th class="text-center">Tipo de Trabajo</th>
+                                        <th class="text-center">Estado</th>
+                                        <th class="text-center">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -197,7 +197,7 @@
                                             <div class="dropdown dropdown-action">
                                                 <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                 <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_employee"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                                 </div>
                                             </div>
                                         </td>

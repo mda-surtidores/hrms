@@ -10,16 +10,16 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Interview Questions</h3>
+                        <h3 class="page-title">Preguntas de la Entrevista</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item">Jobs</li>
-                            <li class="breadcrumb-item active">Interview Questions</li>
+                            <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                            <li class="breadcrumb-item">Trabajos</li>
+                            <li class="breadcrumb-item active">Preguntas de la Entrevista</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn mb-1" data-toggle="modal" data-target="#add_question"><i class="fa fa-plus"></i> Add Question</a>
-                        <a href="#" class="btn add-btn mr-1 mb-1" data-toggle="modal" data-target="#add_category"><i class="fa fa-plus"></i> Add Category</a>
+                        <a href="#" class="btn add-btn mb-1" data-toggle="modal" data-target="#add_question"><i class="fa fa-plus"></i> Añadir Pregunta</a>
+                        <a href="#" class="btn add-btn mr-1 mb-1" data-toggle="modal" data-target="#add_category"><i class="fa fa-plus"></i> Añadir Categoría</a>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Questions</th>
+                                    <th>Preguntas</th>
                                     <th hidden></th>
                                     <th hidden></th>
                                     <th hidden></th>
@@ -40,12 +40,12 @@
                                     <th hidden></th>
                                     <th hidden></th>
                                     <th hidden></th>
-                                    <th>Option A</th>
-                                    <th>Option B</th>
-                                    <th>Option C</th>
-                                    <th>Option D</th>
-                                    <th class="text-center">Correct Answer</th>
-                                    <th class="text-center">Actions</th>
+                                    <th>Opción A</th>
+                                    <th>Opción B</th>
+                                    <th>Opción C</th>
+                                    <th>Opción D</th>
+                                    <th class="text-center">Respuesta Correcta</th>
+                                    <th class="text-center">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -69,8 +69,8 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item edit_question" href="#" data-toggle="modal" data-target="#edit_question"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item delete_question" href="#" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item edit_question" href="#" data-toggle="modal" data-target="#edit_question"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item delete_question" href="#" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -89,7 +89,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Category</h5>
+                        <h5 class="modal-title">Añadir Categoría</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -100,14 +100,14 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Add Category</label>
+                                        <label>Añadir Categoría</label>
                                         <input class="form-control @error('category') is-invalid @enderror" type="text" name="category">
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Cancel</button>
-                                <button type="submit" class="btn btn-primary submit-btn">Save</button>
+                                <button class="btn btn-primary submit-btn">Cancelar</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Guardar</button>
                             </div>
                         </form>
                     </div>
@@ -121,7 +121,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Questions</h5>
+                        <h5 class="modal-title">Añadir Preguntas</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -132,9 +132,9 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Add Category</label>
+                                        <label>Añadir Categoría</label>
                                         <select class="select  @error('category') is-invalid @enderror" name="category">
-                                            <option selected disabled> --Select --</option>
+                                            <option selected disabled> --Seleccionar --</option>
                                             @foreach ($category as $categorys )
                                             <option value="{{ $categorys->category }}" {{ old('category') == $categorys->category ? "selected" :""}}>{{ $categorys->category }}</option>
                                             @endforeach
@@ -143,9 +143,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Department</label>
+                                        <label>Departamento</label>
                                         <select class="select @error('department') is-invalid @enderror" name="department">
-                                            <option selected disabled> --Select --</option>
+                                            <option selected disabled> --Seleccionar --</option>
                                             @foreach ($department as $departments )
                                             <option value="{{ $departments->department }}" {{ old('department') == $departments->department ? "selected" :""}}>{{ $departments->department }}</option>
                                             @endforeach
@@ -156,7 +156,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Add Questions</label>
+                                        <label>Añadir Preguntas</label>
                                         <textarea class="form-control @error('questions') is-invalid @enderror" name="questions">{{ old('questions') }}</textarea>
                                     </div>
                                 </div>
@@ -164,25 +164,25 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Option A</label>
+                                        <label>Opción A</label>
                                         <input class="form-control @error('option_a') is-invalid @enderror" type="text" name="option_a" value="{{ old('option_a') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Option B</label>
+                                        <label>Opción B</label>
                                         <input class="form-control @error('option_b') is-invalid @enderror" type="text" name="option_b" value="{{ old('option_b') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Option C</label>
+                                        <label>Opción C</label>
                                         <input class="form-control @error('option_c') is-invalid @enderror" type="text" name="option_c" value="{{ old('option_c') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Option D</label>
+                                        <label>Opción D</label>
                                         <input class="form-control @error('option_d') is-invalid @enderror" type="text" name="option_d" value="{{ old('option_d') }}">
                                     </div>
                                 </div>
@@ -190,9 +190,9 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Correct Answer</label>
+                                        <label>Respuesta Correcta</label>
                                         <select class="select @error('answer') is-invalid @enderror" name="answer">
-                                            <option selected disabled> --Select --</option>
+                                            <option selected disabled> --Seleccionar --</option>
                                             @foreach ($answer as $answers )
                                             <option value="{{ $answers->answer }}" {{ old('answer') == $answers->answer ? "selected" :""}}>{{ $answers->answer }}</option>
                                             @endforeach
@@ -203,13 +203,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Code Snippets</label>
+                                        <label>Fragmentos de Código</label>
                                         <textarea class="form-control @error('code_snippets') is-invalid @enderror" name="code_snippets">{{ old('code_snippets') }}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Answer Explanation</label>
+                                        <label>Explicación de la Respuesta</label>
                                         <textarea class="form-control @error('answer_explanation') is-invalid @enderror" name="answer_explanation">{{ old('answer_explanation') }}</textarea>
                                     </div>
                                 </div>
@@ -217,20 +217,20 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Add Video Link</label>
+                                        <label>Añadir Enlace de Video</label>
                                         <input class="form-control @error('video_link') is-invalid @enderror" type="text" name="video_link" value="{{ old('video_link') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Add Image To Question</label>
+                                        <label>Añadir Imagen a la Pregunta</label>
                                         <input class="form-control @error('image_to_question') is-invalid @enderror" type="file" name="image_to_question">
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Cancel</button>
-                                <button type="submit" class="btn btn-primary submit-btn">Save</button>
+                                <button class="btn btn-primary submit-btn">Cancelar</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Guardar</button>
                             </div>
                         </form>
                     </div>
@@ -244,7 +244,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Questions</h5>
+                        <h5 class="modal-title">Editar Preguntas</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -256,9 +256,9 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Add Category</label>
+                                        <label>Añadir Categoría</label>
                                         <select class="select" name="category" id="e_category">
-                                            <option selected disabled> --Select --</option>
+                                            <option selected disabled> --Seleccionar --</option>
                                             @foreach ($category as $categorys )
                                             <option value="{{ $categorys->category }}" {{ old('category') == $categorys->category ? "selected" :""}}>{{ $categorys->category }}</option>
                                             @endforeach
@@ -267,9 +267,9 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Department</label>
+                                        <label>Departamento</label>
                                         <select class="select" name="department" id="e_department">
-                                            <option selected disabled> --Select --</option>
+                                            <option selected disabled> --Seleccionar --</option>
                                             @foreach ($department as $departments )
                                             <option value="{{ $departments->department }}" {{ old('department') == $departments->department ? "selected" :""}}>{{ $departments->department }}</option>
                                             @endforeach
@@ -280,7 +280,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Add Questions</label>
+                                        <label>Añadir Preguntas</label>
                                         <textarea class="form-control" name="questions" id="e_questions"></textarea>
                                     </div>
                                 </div>
@@ -288,25 +288,25 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Option A</label>
+                                        <label>Opción A</label>
                                         <input class="form-control" type="text" name="option_a" id="e_option_a" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Option B</label>
+                                        <label>Opción B</label>
                                         <input class="form-control" type="text" name="option_b" id="e_option_b" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Option C</label>
+                                        <label>Opción C</label>
                                         <input class="form-control" type="text" name="option_c" id="e_option_c" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Option D</label>
+                                        <label>Opción D</label>
                                         <input class="form-control" type="text" name="option_d" id="e_option_d" value="">
                                     </div>
                                 </div>
@@ -314,9 +314,9 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Correct Answer</label>
+                                        <label>Respuesta Correcta</label>
                                         <select class="select" name="answer" id="e_answer">
-                                            <option selected disabled> --Select --</option>
+                                            <option selected disabled> --Seleccionar --</option>
                                             @foreach ($answer as $answers )
                                             <option value="{{ $answers->answer }}" {{ old('answer') == $answers->answer ? "selected" :""}}>{{ $answers->answer }}</option>
                                             @endforeach
@@ -327,13 +327,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Code Snippets</label>
+                                        <label>Fragmentos de Código</label>
                                         <textarea class="form-control" name="code_snippets" id="e_code_snippets"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Answer Explanation</label>
+                                        <label>Explicación de la Respuesta</label>
                                         <textarea class="form-control" name="answer_explanation" id="e_answer_explanation"></textarea>
                                     </div>
                                 </div>
@@ -341,20 +341,20 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Add Video Link</label>
+                                        <label>Añadir Enlace de Video</label>
                                         <input class="form-control" type="text" name="video_link" id="e_video_link" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Add Image To Question</label>
+                                        <label>Añadir Imagen a la Pregunta</label>
                                         <input class="form-control" type="file" name="image_to_question">
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Cancel</button>
-                                <button type="submit" class="btn btn-primary submit-btn">Save</button>
+                                <button class="btn btn-primary submit-btn">Cancelar</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Guardar</button>
                             </div>
                         </form>
                     </div>
@@ -369,8 +369,8 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Eliminar</h3>
+                            <p>¿Estás seguro de que quieres eliminar?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <form action="{{ route('questions/delete') }}" method="POST">
@@ -379,10 +379,10 @@
                                 <input type="hidden" class="e_id" name="id" value="">
                                 <div class="row">
                                     <div class="col-6">
-                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Delete</button>
+                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Eliminar</button>
                                     </div>
                                     <div class="col-6">
-                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                     </div>
                                 </div>
                             </form>

@@ -13,14 +13,14 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Employee</h3>
+                        <h3 class="page-title">Empleado</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Employee</li>
+                            <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Empleado</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Add Employee</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Añadir Empleado</a>
                         <div class="view-icons">
                             <a href="{{ route('all/employee/card') }}" class="grid-view btn btn-link active"><i class="fa fa-th"></i></a>
                             <a href="{{ route('all/employee/list') }}" class="list-view btn btn-link"><i class="fa fa-bars"></i></a>
@@ -34,31 +34,31 @@
             <form action="{{ route('all/employee/list/search') }}" method="POST">
                 @csrf
                 <div class="row filter-row">
-                    <div class="col-sm-6 col-md-3">  
+                    <div class="col-sm-6 col-md-3">
                         <div class="form-group form-focus">
                             <input type="text" class="form-control floating" name="employee_id">
-                            <label class="focus-label">Employee ID</label>
+                            <label class="focus-label">ID de Empleado</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">  
+                    <div class="col-sm-6 col-md-3">
                         <div class="form-group form-focus">
                             <input type="text" class="form-control floating">
-                            <label class="focus-label">Employee Name</label>
+                            <label class="focus-label">Nombre del Empleado</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3"> 
+                    <div class="col-sm-6 col-md-3">
                         <div class="form-group form-focus">
                             <input type="text" class="form-control floating">
-                            <label class="focus-label">Position</label>
+                            <label class="focus-label">Cargo</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">  
-                        <button type="sumit" class="btn btn-success btn-block"> Search </button>  
+                    <div class="col-sm-6 col-md-3">
+                        <button type="sumit" class="btn btn-success btn-block"> Buscar </button>
                     </div>
                 </div>
             </form>
             <!-- Search Filter -->
-              
+
 
             <div class="row">
                 <div class="col-md-12">
@@ -66,13 +66,13 @@
                         <table class="table table-striped custom-table datatable">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Employee ID</th>
-                                    <th>Email</th>
-                                    <th>Mobile</th>
-                                    <th class="text-nowrap">Join Date</th>
-                                    <th>Role</th>
-                                    <th class="text-right no-sort">Action</th>
+                                    <th>Nombre</th>
+                                    <th>ID de Empleado</th>
+                                    <th>Correo Electrónico</th>
+                                    <th>Móvil</th>
+                                    <th class="text-nowrap">Fecha de Ingreso</th>
+                                    <th>Rol</th>
+                                    <th class="text-right no-sort">Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -93,8 +93,8 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="{{ url('all/employee/view/edit/'.$items->user_id) }}"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item" href="{{url('all/employee/delete/'.$items->user_id)}}"onclick="return confirm('Are you sure to want to delete it?')"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item" href="{{ url('all/employee/view/edit/'.$items->user_id) }}"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item" href="{{url('all/employee/delete/'.$items->user_id)}}"onclick="return confirm('¿Estás seguro de que quieres eliminarlo?')"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -107,13 +107,13 @@
             </div>
         </div>
         <!-- /Page Content -->
-      
+
         <!-- Add Employee Modal -->
         <div id="add_employee" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Employee</h5>
+                        <h5 class="modal-title">Añadir Empleado</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -124,25 +124,25 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Full Name</label>
+                                        <label class="col-form-label">Nombre Completo</label>
                                         <select class="select" id="name" name="name">
-                                            <option value="">-- Select --</option>
+                                            <option value="">-- Seleccionar --</option>
                                             @foreach ($userList as $key=>$user )
                                                 <option value="{{ $user->name }}" data-employee_id={{ $user->user_id }} data-email={{ $user->email }}>{{ $user->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
-                            
+
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Email <span class="text-danger">*</span></label>
-                                        <input class="form-control" type="email" id="email" name="email" placeholder="Auto email" readonly>
+                                        <label class="col-form-label">Correo Electrónico <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="email" id="email" name="email" placeholder="Correo automático" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Birth Date</label>
+                                        <label>Fecha de Nacimiento</label>
                                         <div class="cal-icon">
                                             <input class="form-control datetimepicker" type="text" id="birth_date" name="birth_Date">
                                         </div>
@@ -150,24 +150,24 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Gender</label>
+                                        <label>Género</label>
                                         <select class="select form-control" id="gender" name="gender">
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
+                                            <option value="Male">Masculino</option>
+                                            <option value="Female">Femenino</option>
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">  
-                                    <div class="form-group">
-                                        <label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="employee_id" name="employee_id" placeholder="Auto id employee" readonly>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label class="col-form-label">Line Manager</label>
+                                        <label class="col-form-label">ID de Empleado <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="employee_id" name="employee_id" placeholder="ID de empleado automático" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="col-form-label">Gerente de Línea</label>
                                         <select class="select" id="company" name="line_manager">
-                                            <option selected disabled>-- Select --</option>
+                                            <option selected disabled>-- Seleccionar --</option>
                                             @foreach ($userList as $key=>$user )
                                                 <option value="Soeng Souy">Soeng Souy</option>
                                                 <option value="StarGame Kh">StarGame Kh</option>
@@ -180,13 +180,13 @@
                                 <table class="table table-striped custom-table">
                                     <thead>
                                         <tr>
-                                            <th>Module Permission</th>
-                                            <th class="text-center">Read</th>
-                                            <th class="text-center">Write</th>
-                                            <th class="text-center">Create</th>
-                                            <th class="text-center">Delete</th>
-                                            <th class="text-center">Import</th>
-                                            <th class="text-center">Export</th>
+                                            <th>Permiso del Módulo</th>
+                                            <th class="text-center">Leer</th>
+                                            <th class="text-center">Escribir</th>
+                                            <th class="text-center">Crear</th>
+                                            <th class="text-center">Eliminar</th>
+                                            <th class="text-center">Importar</th>
+                                            <th class="text-center">Exportar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -229,7 +229,7 @@
                                 </table>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Submit</button>
+                                <button class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -254,7 +254,7 @@
             }
         });
     </script>
-    
+
     <script>
         // select auto id and email
         $('#name').on('change',function()

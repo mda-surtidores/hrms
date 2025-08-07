@@ -25,14 +25,14 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Leaves <span id="year"></span></h3>
+                        <h3 class="page-title">Vacaciones <span id="year"></span></h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Leaves</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Vacaciones</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_leave"><i class="fa fa-plus"></i> Add Leave</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_leave"><i class="fa fa-plus"></i> Añadir Vacación</a>
                     </div>
                 </div>
             </div>
@@ -60,18 +60,18 @@
                                 <tr>
                                     <th>No</th>
                                     <th hidden>ID</th>
-                                    <th>Leave Type</th>
-                                    <th hidden>Remaining Leaves</th>
-                                    <th>From</th>
-                                    <th>To</th>
-                                    <th>No of Days</th>
-                                    <th hidden>No of Days</th>
-                                    <th hidden>Leave Date</th>
-                                    <th hidden>Leave Day</th>
-                                    <th>Reason</th>
-                                    <th class="text-center">Status</th>
-                                    <th>Approved by</th>
-                                    <th class="text-right">Actions</th>
+                                    <th>Tipo de Vacación</th>
+                                    <th hidden>Vacaciones Restantes</th>
+                                    <th>Desde</th>
+                                    <th>Hasta</th>
+                                    <th>No de Días</th>
+                                    <th hidden>No de Días</th>
+                                    <th hidden>Fecha de Vacación</th>
+                                    <th hidden>Día de Vacación</th>
+                                    <th>Razón</th>
+                                    <th class="text-center">Estado</th>
+                                    <th>Aprobado por</th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -86,7 +86,7 @@
                                         <td hidden class="remaining_leave">{{ $leave->remaining_leave }}</td>
                                         <td class="date_from">{{ $leave->date_from }}</td>
                                         <td class="date_to">{{ $leave->date_to }}</td>
-                                        <td>{{ $leave->number_of_day }} days</td>
+                                        <td>{{ $leave->number_of_day }} días</td>
                                         <td hidden class="number_of_day">{{ $leave->number_of_day }}</td>
                                         <td hidden class="leave_date">{{ $leave->leave_date }}</td>
                                         <td hidden class="leave_day">{{ $leave->leave_day }}</td>
@@ -94,7 +94,7 @@
                                         <td class="text-center">
                                             <div class="action-label">
                                                 <a class="btn btn-white btn-sm btn-rounded" href="javascript:void(0);">
-                                                    <i class="fa fa-dot-circle-o text-warning"></i> Pending
+                                                    <i class="fa fa-dot-circle-o text-warning"></i> Pendiente
                                                 </a>
                                             </div>
                                         </td>
@@ -112,8 +112,8 @@
                                             <div class="dropdown dropdown-action">
                                                 <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                 <div class="dropdown-menu dropdown-menu-right">
-                                                    <a class="dropdown-item edit_leave" href="#" data-toggle="modal" data-target="#edit_leave"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                    <a class="dropdown-item delete_leave" href="#" data-toggle="modal" data-target="#delete_approve"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                    <a class="dropdown-item edit_leave" href="#" data-toggle="modal" data-target="#edit_leave"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                    <a class="dropdown-item delete_leave" href="#" data-toggle="modal" data-target="#delete_approve"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                                 </div>
                                             </div>
                                         </td>
@@ -132,7 +132,7 @@
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Leave</h5>
+                        <h5 class="modal-title">Añadir Vacación</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -143,9 +143,9 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Leave Type <span class="text-danger">*</span></label>
+                                        <label>Tipo de Vacación <span class="text-danger">*</span></label>
                                         <select class="select" id="leave_type" name="leave_type">
-                                            <option selected disabled>Select Leave Type</option>
+                                            <option selected disabled>Seleccionar Tipo de Vacación</option>
                                             @foreach($leaveInformation as $key => $leaves)
                                                 @if($leaves->leave_type != 'Total Leave Balance' && $leaves->leave_type != 'Use Leave' && $leaves->leave_type != 'Remaining Leave')   
                                                     <option value="{{ $leaves->leave_type }}">{{ $leaves->leave_type }}</option>
@@ -156,7 +156,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Remaining Leaves <span class="text-danger">*</span></label>
+                                        <label>Vacaciones Restantes <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="remaining_leave" name="remaining_leave" readonly value="0">
                                     </div>
                                 </div>
@@ -165,7 +165,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>From <span class="text-danger">*</span></label>
+                                        <label>Desde <span class="text-danger">*</span></label>
                                         <div class="cal-icon">
                                             <input type="text" class="form-control datetimepicker" id="date_from" name="date_from" autocomplete="off">
                                         </div>
@@ -173,7 +173,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>To <span class="text-danger">*</span></label>
+                                        <label>Hasta <span class="text-danger">*</span></label>
                                         <div class="cal-icon">
                                             <input type="text" class="form-control datetimepicker" id="date_to" name="date_to" autocomplete="off">
                                         </div>
@@ -185,31 +185,31 @@
                                 <div class="col-md-6" id="select_leave_day" style="display: none"></div>
                             </div>
                             <div class="form-group">
-                                <label>Number of days <span class="text-danger">*</span></label>
+                                <label>Número de días <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="number_of_day" name="number_of_day" value="0" readonly>
                             </div>
                             <div class="row">
                                 <div id="leave_day_select" class="col-md-12">
                                     <div class="form-group">
-                                        <label>Leave Day <span class="text-danger">*</span></label>
+                                        <label>Día de Vacación <span class="text-danger">*</span></label>
                                         <select class="select" name="select_leave_day[]" id="leave_day">
-                                            <option value="Full-Day Leave">Full-Day Leave</option>
-                                            <option value="Half-Day Morning Leave">Half-Day Morning Leave</option>
-                                            <option value="Half-Day Afternoon Leave">Half-Day Afternoon Leave</option>
-                                            <option value="Public Holiday">Public Holiday</option>
-                                            <option value="Off Schedule">Off Schedule</option>
+                                            <option value="Full-Day Leave">Día Completo de Vacación</option>
+                                            <option value="Half-Day Morning Leave">Medio Día de Vacación (Mañana)</option>
+                                            <option value="Half-Day Afternoon Leave">Medio Día de Vacación (Tarde)</option>
+                                            <option value="Public Holiday">Día Festivo</option>
+                                            <option value="Off Schedule">Fuera de Horario</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label>Leave Reason <span class="text-danger">*</span></label>
+                                <label>Razón de la Vacación <span class="text-danger">*</span></label>
                                 <textarea rows="2" class="form-control" name="reason"></textarea>
                             </div>
                            
                             <div class="submit-section">
-                                <button type="submit" id="apply_leave" class="btn btn-primary submit-btn">Submit</button>
+                                <button type="submit" id="apply_leave" class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -223,7 +223,7 @@
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Leave</h5>
+                        <h5 class="modal-title">Editar Vacación</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -235,7 +235,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Leave Type <span class="text-danger">*</span></label>
+                                        <label>Tipo de Vacación <span class="text-danger">*</span></label>
                                         <select class="select" id="e_leave_type" name="leave_type">
                                             @foreach($leaveInformation as $key => $leaves)
                                                 @if($leaves->leave_type != 'Total Leave Balance' && $leaves->leave_type != 'Use Leave' && $leaves->leave_type != 'Remaining Leave')   
@@ -248,7 +248,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="form-group">
-                                            <label>Remaining Leaves <span class="text-danger">*</span></label>
+                                            <label>Vacaciones Restantes <span class="text-danger">*</span></label>
                                             <input type="text" class="form-control" id="e_remaining_leave" name="remaining_leave" readonly>
                                         </div>
                                     </div>
@@ -257,7 +257,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>From <span class="text-danger">*</span></label>
+                                        <label>Desde <span class="text-danger">*</span></label>
                                         <div class="cal-icon">
                                             <input type="text" class="form-control datetimepicker" id="e_date_from" name="date_from" autocomplete="off">
                                         </div>
@@ -265,7 +265,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>To <span class="text-danger">*</span></label>
+                                        <label>Hasta <span class="text-danger">*</span></label>
                                         <div class="cal-icon">
                                             <input type="text" class="form-control datetimepicker" id="e_date_to" name="date_to" autocomplete="off">
                                         </div>
@@ -277,15 +277,15 @@
                                 <div class="col-md-6" id="e_select_leave_day" style="display: block"></div>
                             </div>
                             <div class="form-group">
-                                <label>Number of days <span class="text-danger">*</span></label>
+                                <label>Número de días <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="e_number_of_day" name="number_of_day" readonly>
                             </div>
                             <div class="form-group">
-                                <label>Leave Reason <span class="text-danger">*</span></label>
+                                <label>Razón de la Vacación <span class="text-danger">*</span></label>
                                 <textarea rows="2" class="form-control" id="e_reason" name="reason"></textarea>
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn" id="e_apply_leave">Save</button>
+                                <button type="submit" class="btn btn-primary submit-btn" id="e_apply_leave">Guardar</button>
                             </div>
                         </form>
                     </div>
@@ -300,8 +300,8 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete Leave</h3>
-                            <p>Are you sure want to Cancel this leave?</p>
+                            <h3>Eliminar Vacación</h3>
+                            <p>¿Estás seguro de que quieres cancelar esta vacación?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <form action="{{ route('form/leaves/edit/delete') }}" method="POST">
@@ -309,10 +309,10 @@
                                 <input type="hidden" class="form-control" id="d_id_record" name="id_record" readonly>
                                 <div class="row">
                                     <div class="col-6">
-                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Delete</button>
+                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Eliminar</button>
                                     </div>
                                     <div class="col-6">
-                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                     </div>
                                 </div>
                             </form>
@@ -387,7 +387,7 @@
                             // Append each leave date to the display
                             $('#leave_dates_display').append(`
                                 <div class="form-group">
-                                    <label><span class="text-danger">Leave Date ${d+1}</span></label>
+                                    <label><span class="text-danger">Fecha de Vacación ${d+1}</span></label>
                                     <div class="cal-icon">
                                         <input type="text" class="form-control" id="${leaveDateInputId}" name="leave_date[]" value="${formattedDateConvert}" readonly>
                                     </div>
@@ -402,13 +402,13 @@
                                     document.getElementById('leave_day_select').style.display = 'none'; // or 'flex', depending on your layout
                                     $('#select_leave_day').append(`
                                         <div class="form-group">
-                                            <label><span class="text-danger">Leave Day ${d+1}</span></label>
+                                            <label><span class="text-danger">Día de Vacación ${d+1}</span></label>
                                             <select class="select" name="select_leave_day[]" id="${leaveDayId}">
-                                                <option value="Full-Day Leave">Full-Day Leave</option>
-                                                <option value="Half-Day Morning Leave">Half-Day Morning Leave</option>
-                                                <option value="Half-Day Afternoon Leave">Half-Day Afternoon Leave</option>
-                                                <option value="Public Holiday">Public Holiday</option>
-                                                <option value="Off Schedule">Off Schedule</option>
+                                                <option value="Full-Day Leave">Día Completo de Vacación</option>
+                                                <option value="Half-Day Morning Leave">Medio Día de Vacación (Mañana)</option>
+                                                <option value="Half-Day Afternoon Leave">Medio Día de Vacación (Tarde)</option>
+                                                <option value="Public Holiday">Día Festivo</option>
+                                                <option value="Off Schedule">Fuera de Horario</option>
                                             </select>
                                         </div>
                                     `);
@@ -571,7 +571,7 @@
                     // For Leave Dates
                     htmlDateContent += `
                         <div class="form-group">
-                            <label><span class="text-danger">Leave Date ${count}</span></label>
+                            <label><span class="text-danger">Fecha de Vacación ${count}</span></label>
                             <div class="cal-icon">
                                 <input type="text" class="form-control" id="leave_date_${i}" name="leave_date[]" value="${leaveDate}" readonly>
                             </div>
@@ -581,14 +581,14 @@
                     // For Leave Days (Select Dropdown)
                     htmlDayContent += `
                         <div class="form-group">
-                            <label><span class="text-danger">Leave Day ${count}</span></label>
+                            <label><span class="text-danger">Día de Vacación ${count}</span></label>
                             <select class="select" name="select_leave_day[]" id="e_leave_day_${i}">
                                 <option value="${leaveDay}" selected>${leaveDay}</option>
-                                <option value="Full-Day Leave">Full-Day Leave</option>
-                                <option value="Half-Day Morning Leave">Half-Day Morning Leave</option>
-                                <option value="Half-Day Afternoon Leave">Half-Day Afternoon Leave</option>
-                                <option value="Public Holiday">Public Holiday</option>
-                                <option value="Off Schedule">Off Schedule</option>
+                                <option value="Full-Day Leave">Día Completo de Vacación</option>
+                                <option value="Half-Day Morning Leave">Medio Día de Vacación (Mañana)</option>
+                                <option value="Half-Day Afternoon Leave">Medio Día de Vacación (Tarde)</option>
+                                <option value="Public Holiday">Día Festivo</option>
+                                <option value="Off Schedule">Fuera de Horario</option>
                             </select>
                         </div>
                     `;
@@ -684,7 +684,7 @@
                     var formattedDate = currentLeaveDate.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).replace(',', '');
                     $('#e_leave_dates_display').append(`
                         <div class="form-group">
-                            <label><span class="text-danger">Leave Date ${d + 1}</span></label>
+                            <label><span class="text-danger">Fecha de Vacación ${d + 1}</span></label>
                             <input type="text" class="form-control" name="leave_date[]" value="${formattedDate}" readonly>
                         </div>
                     `);
@@ -698,13 +698,13 @@
                     const leaveDayId = `e_leave_day_${d}`;
                     $('#e_select_leave_day').append(`
                         <div class="form-group">
-                            <label><span class="text-danger">Leave Day ${d + 1}</span></label>
+                            <label><span class="text-danger">Día de Vacación ${d + 1}</span></label>
                             <select class="select" name="select_leave_day[]" id="${leaveDayId}">
-                                <option value="Full-Day Leave">Full-Day Leave</option>
-                                <option value="Half-Day Morning Leave">Half-Day Morning Leave</option>
-                                <option value="Half-Day Afternoon Leave">Half-Day Afternoon Leave</option>
-                                <option value="Public Holiday">Public Holiday</option>
-                                <option value="Off Schedule">Off Schedule</option>
+                                <option value="Full-Day Leave">Día Completo de Vacación</option>
+                                <option value="Half-Day Morning Leave">Medio Día de Vacación (Mañana)</option>
+                                <option value="Half-Day Afternoon Leave">Medio Día de Vacación (Tarde)</option>
+                                <option value="Public Holiday">Día Festivo</option>
+                                <option value="Off Schedule">Fuera de Horario</option>
                             </select>
                         </div>
                     `);

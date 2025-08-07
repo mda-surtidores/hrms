@@ -8,10 +8,10 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h3 class="page-title">Job Details</h3>
+                        <h3 class="page-title">Detalles del Trabajo</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Job Details</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Detalles del Trabajo</li>
                         </ul>
                     </div>
                 </div>
@@ -24,14 +24,14 @@
                         <h3 class="job-title">{{ $job_view_detail[0]->job_title }}</h3>
                         <span class="job-dept">{{ $job_view_detail[0]->department }}</span>
                         <ul class="job-post-det">
-                            <li><i class="fa fa-calendar"></i> Post Date: <span class="text-blue">{{ date('d F, Y',strtotime($job_view_detail[0]->start_date)) }}</span></li>
-                            <li><i class="fa fa-calendar"></i> Last Date: <span class="text-blue">{{ date('d F, Y',strtotime($job_view_detail[0]->expired_date)) }}</span></li>
-                            <li><i class="fa fa-user-o"></i> Applications: <span class="text-blue">4</span></li>
-                            <li><i class="fa fa-eye"></i> Views: <span class="text-blue">3806</span></li>
+                            <li><i class="fa fa-calendar"></i> Fecha de Publicación: <span class="text-blue">{{ date('d F, Y',strtotime($job_view_detail[0]->start_date)) }}</span></li>
+                            <li><i class="fa fa-calendar"></i> Última Fecha: <span class="text-blue">{{ date('d F, Y',strtotime($job_view_detail[0]->expired_date)) }}</span></li>
+                            <li><i class="fa fa-user-o"></i> Solicitudes: <span class="text-blue">4</span></li>
+                            <li><i class="fa fa-eye"></i> Vistas: <span class="text-blue">3806</span></li>
                         </ul>
                     </div>
                     <div class="job-content job-widget">
-                        <div class="job-desc-title"><h4>Job Description</h4></div>
+                        <div class="job-desc-title"><h4>Descripción del Trabajo</h4></div>
                         <div class="job-description">
                             <p>{!!nl2br ($job_view_detail[0]->description) !!}</p>
                         </div>
@@ -39,30 +39,30 @@
                 </div>
                 <div class="col-md-4">
                     <div class="job-det-info job-widget">
-                        <a class="btn job-btn" href="#" data-toggle="modal" data-target="#edit_job">Edit</a>
+                        <a class="btn job-btn" href="#" data-toggle="modal" data-target="#edit_job">Editar</a>
                         <div class="info-list">
                             <span><i class="fa fa-bar-chart"></i></span>
-                            <h5>Job Type</h5>
+                            <h5>Tipo de Trabajo</h5>
                             <p>{{ $job_view_detail[0]->job_type }}</p>
                         </div>
                         <div class="info-list">
                             <span><i class="fa fa-money"></i></span>
-                            <h5>Salary</h5>
+                            <h5>Salario</h5>
                             <p>{{ $job_view_detail[0]->salary_from }}$ - {{ $job_view_detail[0]->salary_to }}$</p>
                         </div>
                         <div class="info-list">
                             <span><i class="fa fa-suitcase"></i></span>
-                            <h5>Experience</h5>
+                            <h5>Experiencia</h5>
                             <p>{{ $job_view_detail[0]->experience }}</p>
                         </div>
                         <div class="info-list">
                             <span><i class="fa fa-ticket"></i></span>
-                            <h5>Vacancy</h5>
+                            <h5>Vacante</h5>
                             <p>{{ $job_view_detail[0]->no_of_vacancies }}</p>
                         </div>
                         <div class="info-list">
                             <span><i class="fa fa-map-signs"></i></span>
-                            <h5>Location</h5>
+                            <h5>Ubicación</h5>
                             <p>{!!nl2br ($job_view_detail[0]->job_location) !!}</p>
                         </div>
                         <div class="info-list">
@@ -72,7 +72,7 @@
                             </p>
                         </div>
                         <div class="info-list text-center">
-                            <a class="app-ends" href="#">Application ends in 2d 7h 6m</a>
+                            <a class="app-ends" href="#">La solicitud finaliza en 2d 7h 6m</a>
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Job</h5>
+                        <h5 class="modal-title">Editar Trabajo</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -96,20 +96,20 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Title</label>
-                                        <input class="form-control" type="text" value="Web Developer">
+                                        <label>Título del Trabajo</label>
+                                        <input class="form-control" type="text" value="Desarrollador Web">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Department</label>
+                                        <label>Departamento</label>
                                         <select class="select">
                                             <option>-</option>
-                                            <option selected="">Web Development</option>
-                                            <option>Application Development</option>
-                                            <option>IT Management</option>
-                                            <option>Accounts Management</option>
-                                            <option>Support Management</option>
+                                            <option selected="">Desarrollo Web</option>
+                                            <option>Desarrollo de Aplicaciones</option>
+                                            <option>Gestión de TI</option>
+                                            <option>Gestión de Cuentas</option>
+                                            <option>Gestión de Soporte</option>
                                             <option>Marketing</option>
                                         </select>
                                     </div>
@@ -118,13 +118,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Location</label>
+                                        <label>Ubicación del Trabajo</label>
                                         <input class="form-control" type="text" value="California">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>No of Vacancies</label>
+                                        <label>No de Vacantes</label>
                                         <input class="form-control" type="text" value="5">
                                     </div>
                                 </div>
@@ -132,13 +132,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Experience</label>
-                                        <input class="form-control" type="text" value="2 Years">
+                                        <label>Experiencia</label>
+                                        <input class="form-control" type="text" value="2 Años">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Age</label>
+                                        <label>Edad</label>
                                         <input class="form-control" type="text" value="-">
                                     </div>
                                 </div>
@@ -146,13 +146,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Salary From</label>
+                                        <label>Salario Desde</label>
                                         <input type="text" class="form-control" value="32k">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Salary To</label>
+                                        <label>Salario Hasta</label>
                                         <input type="text" class="form-control" value="38k">
                                     </div>
                                 </div>
@@ -160,24 +160,24 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Type</label>
+                                        <label>Tipo de Trabajo</label>
                                         <select class="select">
-                                            <option selected="">Full Time</option>
-                                            <option>Part Time</option>
-                                            <option>Internship</option>
-                                            <option>Temporary</option>
-                                            <option>Remote</option>
-                                            <option>Others</option>
+                                            <option selected="">Tiempo Completo</option>
+                                            <option>Tiempo Parcial</option>
+                                            <option>Prácticas</option>
+                                            <option>Temporal</option>
+                                            <option>Remoto</option>
+                                            <option>Otros</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Status</label>
+                                        <label>Estado</label>
                                         <select class="select">
-                                            <option selected="">Open</option>
-                                            <option>Closed</option>
-                                            <option>Cancelled</option>
+                                            <option selected="">Abierto</option>
+                                            <option>Cerrado</option>
+                                            <option>Cancelado</option>
                                         </select>
                                     </div>
                                 </div>
@@ -185,13 +185,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Start Date</label>
+                                        <label>Fecha de Inicio</label>
                                         <input type="text" class="form-control datetimepicker" value="3 Mar 2019">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Expired Date</label>
+                                        <label>Fecha de Vencimiento</label>
                                         <input type="text" class="form-control datetimepicker" value="31 May 2019">
                                     </div>
                                 </div>
@@ -199,13 +199,13 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Description</label>
+                                        <label>Descripción</label>
                                         <textarea class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Save</button>
+                                <button class="btn btn-primary submit-btn">Guardar</button>
                             </div>
                         </form>
                     </div>

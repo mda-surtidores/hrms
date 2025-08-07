@@ -24,14 +24,14 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Leaves <span id="year"></span></h3>
+                        <h3 class="page-title">Vacaciones <span id="year"></span></h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Leaves</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Vacaciones</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_leave"><i class="fa fa-plus"></i> Add Leave</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_leave"><i class="fa fa-plus"></i> Añadir Vacación</a>
                     </div>
                 </div>
             </div>
@@ -39,25 +39,25 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Today Presents</h6>
+                        <h6>Presentes Hoy</h6>
                         <h4>12 / 60</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Planned Leaves</h6>
-                        <h4>8 <span>Today</span></h4>
+                        <h6>Vacaciones Planificadas</h6>
+                        <h4>8 <span>Hoy</span></h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Unplanned Leaves</h6>
-                        <h4>0 <span>Today</span></h4>
+                        <h6>Vacaciones no Planificadas</h6>
+                        <h4>0 <span>Hoy</span></h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Pending Requests</h6>
+                        <h6>Solicitudes Pendientes</h6>
                         <h4>12</h4>
                     </div>
                 </div>
@@ -66,72 +66,72 @@
 
             <!-- Search Filter -->
             <div class="row filter-row">
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
+                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                     <div class="form-group form-focus">
                         <input type="text" class="form-control floating">
-                        <label class="focus-label">Employee Name</label>
+                        <label class="focus-label">Nombre del Empleado</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
+                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                     <div class="form-group form-focus select-focus">
-                        <select class="select floating"> 
-                            <option> -- Select -- </option>
+                        <select class="select floating">
+                            <option> -- Seleccionar -- </option>
                             <option>Casual Leave</option>
                             <option>Medical Leave</option>
                             <option>Loss of Pay</option>
                         </select>
-                        <label class="focus-label">Leave Type</label>
+                        <label class="focus-label">Tipo de Vacación</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12"> 
+                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                     <div class="form-group form-focus select-focus">
-                        <select class="select floating"> 
-                            <option> -- Select -- </option>
-                            <option> Pending </option>
-                            <option> Approved </option>
-                            <option> Rejected </option>
+                        <select class="select floating">
+                            <option> -- Seleccionar -- </option>
+                            <option> Pendiente </option>
+                            <option> Aprobado </option>
+                            <option> Rechazado </option>
                         </select>
-                        <label class="focus-label">Leave Status</label>
+                        <label class="focus-label">Estado de la Vacación</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
+                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                     <div class="form-group form-focus">
                         <div class="cal-icon">
                             <input class="form-control floating datetimepicker" type="text">
                         </div>
-                        <label class="focus-label">From</label>
+                        <label class="focus-label">Desde</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
+                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                     <div class="form-group form-focus">
                         <div class="cal-icon">
                             <input class="form-control floating datetimepicker" type="text">
                         </div>
-                        <label class="focus-label">To</label>
+                        <label class="focus-label">Hasta</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">  
-                    <a href="#" class="btn btn-success btn-block"> Search </a>  
-                </div>     
+                <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+                    <a href="#" class="btn btn-success btn-block"> Buscar </a>
+                </div>
             </div>
             <!-- /Search Filter -->
 
 			<!-- /Page Header -->
-              
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="table-responsive">
                         <table class="table table-striped custom-table mb-0 datatable">
                             <thead>
                                 <tr>
-                                    <th>Employee</th>
-                                    <th>Leave Type</th>
-                                    <th>From</th>
-                                    <th>To</th>
-                                    <th>No of Days</th>
-                                    <th>Reason</th>
-                                    <th class="text-center">Status</th>
-                                    <th class="text-right">Actions</th>
+                                    <th>Empleado</th>
+                                    <th>Tipo de Vacación</th>
+                                    <th>Desde</th>
+                                    <th>Hasta</th>
+                                    <th>No de Días</th>
+                                    <th>Razón</th>
+                                    <th class="text-center">Estado</th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
 
@@ -163,13 +163,13 @@
                                             <td class="text-center">
                                                 <div class="dropdown action-label">
                                                     <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                        <i class="fa fa-dot-circle-o text-purple"></i> New
+                                                        <i class="fa fa-dot-circle-o text-purple"></i> Nuevo
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-purple"></i> New</a>
-                                                        <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Pending</a>
-                                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#approve_leave"><i class="fa fa-dot-circle-o text-success"></i> Approved</a>
-                                                        <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Declined</a>
+                                                        <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-purple"></i> Nuevo</a>
+                                                        <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Pendiente</a>
+                                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#approve_leave"><i class="fa fa-dot-circle-o text-success"></i> Aprobado</a>
+                                                        <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Rechazado</a>
                                                     </div>
                                                 </div>
                                             </td>
@@ -177,8 +177,8 @@
                                                 <div class="dropdown dropdown-action">
                                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                                     <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item leaveUpdate" data-toggle="modal" data-id="'.$items->id.'" data-target="#edit_leave"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                        <a class="dropdown-item leaveDelete" href="#" data-toggle="modal" data-target="#delete_approve"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                        <a class="dropdown-item leaveUpdate" data-toggle="modal" data-id="'.$items->id.'" data-target="#edit_leave"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                        <a class="dropdown-item leaveDelete" href="#" data-toggle="modal" data-target="#delete_approve"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                                     </div>
                                                 </div>
                                             </td>
@@ -192,13 +192,13 @@
             </div>
         </div>
         <!-- /Page Content -->
-       
+
         <!-- Add Leave Modal -->
         <div id="add_leave" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Leave</h5>
+                        <h5 class="modal-title">Añadir Vacación</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -209,9 +209,9 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Employee Name <span class="text-danger">*</span></label>
+                                        <label>Nombre del Empleado <span class="text-danger">*</span></label>
                                         <select class="select select2s-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" id="employee_name" name="employee_name">
-                                            <option value="">-- Select --</option>
+                                            <option value="">-- Seleccionar --</option>
                                             @foreach ($userList as $key=>$user )
                                                 <option value="{{ $user->name }}" data-employee_id={{ $user->user_id }}>{{ $user->name }}</option>
                                             @endforeach
@@ -220,7 +220,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Employee ID<span class="text-danger">*</span></label>
+                                        <label>ID de Empleado<span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="employee_id" name="employee_id" readonly>
                                     </div>
                                 </div>
@@ -228,11 +228,11 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Leave Type <span class="text-danger">*</span></label>
+                                        <label>Tipo de Vacación <span class="text-danger">*</span></label>
                                         <select class="select" id="leave_type" name="leave_type">
-                                            <option selected disabled>Select Leave Type</option>
+                                            <option selected disabled>Seleccionar Tipo de Vacación</option>
                                             @foreach($leaveInformation as $key => $leaves)
-                                                @if($leaves->leave_type != 'Total Leave Balance' && $leaves->leave_type != 'Use Leave' && $leaves->leave_type != 'Remaining Leave')   
+                                                @if($leaves->leave_type != 'Total Leave Balance' && $leaves->leave_type != 'Use Leave' && $leaves->leave_type != 'Remaining Leave')
                                                     <option value="{{ $leaves->leave_type }}">{{ $leaves->leave_type }}</option>
                                                 @endif
                                             @endforeach
@@ -241,7 +241,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Remaining Leaves <span class="text-danger">*</span></label>
+                                        <label>Vacaciones Restantes <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="remaining_leave" name="remaining_leave" readonly value="0">
                                     </div>
                                 </div>
@@ -250,7 +250,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>From <span class="text-danger">*</span></label>
+                                        <label>Desde <span class="text-danger">*</span></label>
                                         <div class="cal-icon">
                                             <input type="text" class="form-control datetimepicker" id="date_from" name="date_from" autocomplete="off">
                                         </div>
@@ -258,43 +258,43 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>To <span class="text-danger">*</span></label>
+                                        <label>Hasta <span class="text-danger">*</span></label>
                                         <div class="cal-icon">
                                             <input type="text" class="form-control datetimepicker" id="date_to" name="date_to" autocomplete="off">
                                         </div>
                                     </div>
                                 </div>
-                            </div>  
+                            </div>
                             <div class="row">
                                 <div class="col-md-6" id="leave_dates_display" style="display: none"></div>
                                 <div class="col-md-6" id="select_leave_day" style="display: none"></div>
                             </div>
                             <div class="form-group">
-                                <label>Number of days <span class="text-danger">*</span></label>
+                                <label>Número de días <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="number_of_day" name="number_of_day" value="0" readonly>
                             </div>
                             <div class="row">
                                 <div id="leave_day_select" class="col-md-12">
                                     <div class="form-group">
-                                        <label>Leave Day <span class="text-danger">*</span></label>
+                                        <label>Día de Vacación <span class="text-danger">*</span></label>
                                         <select class="select" name="select_leave_day[]" id="leave_day">
-                                            <option value="Full-Day Leave">Full-Day Leave</option>
-                                            <option value="Half-Day Morning Leave">Half-Day Morning Leave</option>
-                                            <option value="Half-Day Afternoon Leave">Half-Day Afternoon Leave</option>
-                                            <option value="Public Holiday">Public Holiday</option>
-                                            <option value="Off Schedule">Off Schedule</option>
+                                            <option value="Full-Day Leave">Día Completo de Vacación</option>
+                                            <option value="Half-Day Morning Leave">Medio Día de Vacación (Mañana)</option>
+                                            <option value="Half-Day Afternoon Leave">Medio Día de Vacación (Tarde)</option>
+                                            <option value="Public Holiday">Día Festivo</option>
+                                            <option value="Off Schedule">Fuera de Horario</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label>Leave Reason <span class="text-danger">*</span></label>
+                                <label>Razón de la Vacación <span class="text-danger">*</span></label>
                                 <textarea rows="2" class="form-control" name="reason"></textarea>
                             </div>
-                           
+
                             <div class="submit-section">
-                                <button type="submit" id="apply_leave" class="btn btn-primary submit-btn">Submit</button>
+                                <button type="submit" id="apply_leave" class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -302,9 +302,9 @@
             </div>
         </div>
         <!-- /Add Leave Modal -->
-				
+
         <!-- Edit Leave Modal -->
-       
+
         <!-- /Edit Leave Modal -->
 
         <!-- Approve Leave Modal -->
@@ -313,16 +313,16 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Leave Approve</h3>
-                            <p>Are you sure want to approve for this leave?</p>
+                            <h3>Aprobar Vacación</h3>
+                            <p>¿Estás seguro de que quieres aprobar esta vacación?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Approve</a>
+                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Aprobar</a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Decline</a>
+                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Rechazar</a>
                                 </div>
                             </div>
                         </div>
@@ -331,15 +331,15 @@
             </div>
         </div>
         <!-- /Approve Leave Modal -->
-        
+
         <!-- Delete Leave Modal -->
         <div class="modal custom-modal fade" id="delete_approve" role="dialog">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete Leave</h3>
-                            <p>Are you sure want to delete this leave?</p>
+                            <h3>Eliminar Vacación</h3>
+                            <p>¿Estás seguro de que quieres eliminar esta vacación?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <form action="{{ route('form/leaves/edit/delete') }}" method="POST">
@@ -347,10 +347,10 @@
                                 <input type="hidden" name="id" class="e_id" value="">
                                 <div class="row">
                                     <div class="col-6">
-                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Delete</button>
+                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Eliminar</button>
                                     </div>
                                     <div class="col-6">
-                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                     </div>
                                 </div>
                             </form>
@@ -380,11 +380,11 @@
     <script>
         // Define the URL for the AJAX request
         var url = "{{ route('hr/get/information/leave') }}";
-        
+
         // Function to handle leave type change
         function handleLeaveTypeChange() {
             var leaveType   = $('#leave_type').val();
-            var numberOfDay = $('#number_of_day').val();    
+            var numberOfDay = $('#number_of_day').val();
             $.post(url, {
                 leave_type: leaveType,
                 number_of_day: numberOfDay,
@@ -395,14 +395,14 @@
                 }
             }, 'json');
         }
-        
+
         function countLeaveDays()
         {
             // Get the date values from input fields
             var dateFrom = new Date($('#date_from').val());
             var dateTo   = new Date($('#date_to').val());
             var leaveDay = $('#leave_day').val();
-            
+
             if (!isNaN(dateFrom) && !isNaN(dateTo)) {
                 var numDays = Math.ceil((dateTo - dateFrom) / (1000 * 3600 * 24)) + 1;
                 if (leaveDay.includes('Half-Day')) numDays -= 0.5;
@@ -443,7 +443,7 @@
                                     </div>
                                 </div>
                             `);
-                            
+
                             // Function to generate leave day select elements
                             function generateLeaveDaySelects(numDays) {
                                 $('#select_leave_day').empty(); // Clear existing elements
@@ -490,7 +490,7 @@
                             $('#select_leave_day').hide();
                         }
                     }
-                    
+
                 }
             } else {
                 $('#number_of_day').val('0');
@@ -498,7 +498,7 @@
                 $('#select_leave_day').text(''); // Clear the display in case of invalid dates
             }
         }
-            
+
         // Function to update remaining leave
         function updateRemainingLeave(numDays) {
             $.post(url, {
@@ -519,7 +519,7 @@
                 }
             }, 'json');
         }
-        
+
         // Event listeners
         $('#leave_type').on('change', handleLeaveTypeChange);
         $('#date_from, #date_to, #leave_day').on('dp.change', countLeaveDays);
@@ -568,13 +568,13 @@
                     form.submit();
                 }
             });
-    
+
             $('#employee_name, #leave_type').on('change', function() {
                 $(this).siblings('span.error').toggle(!$(this).val());
             });
         });
     </script>
-    
+
 
     @endsection
 @endsection

@@ -8,11 +8,11 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col-12">
-                        <h3 class="page-title">Manage Resumes</h3>
+                        <h3 class="page-title">Gestionar CVs</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item">Jobs</li>
-                            <li class="breadcrumb-item active">Manage Resumes</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Panel de Control</a></li>
+                            <li class="breadcrumb-item">Trabajos</li>
+                            <li class="breadcrumb-item active">Gestionar CVs</li>
                         </ul>
                     </div>
                 </div>
@@ -26,15 +26,15 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Name</th>
-                                    <th>Job Title</th>
-                                    <th>Department</th>
-                                    <th>Start Date</th>
-                                    <th>Expire Date</th>
-                                    <th class="text-center">Job Type</th>
-                                    <th class="text-center">Status</th>
-                                    <th>Resume</th>
-                                    <th class="text-right">Actions</th>
+                                    <th>Nombre</th>
+                                    <th>Título del Trabajo</th>
+                                    <th>Departamento</th>
+                                    <th>Fecha de Inicio</th>
+                                    <th>Fecha de Vencimiento</th>
+                                    <th class="text-center">Tipo de Trabajo</th>
+                                    <th class="text-center">Estado</th>
+                                    <th>CV</th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -68,36 +68,36 @@
                                     <td class="text-center">
                                         <div class="dropdown action-label">
                                             <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa fa-dot-circle-o text-danger"></i> Full Time
+                                                <i class="fa fa-dot-circle-o text-danger"></i> Tiempo Completo
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Full Time</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Part Time</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Internship</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-warning"></i> Temporary</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-warning"></i> Other</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Tiempo Completo</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Tiempo Parcial</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Prácticas</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-warning"></i> Temporal</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-warning"></i> Otro</a>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="text-center">
                                         <div class="dropdown action-label">
                                             <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa fa-dot-circle-o text-danger"></i> Open
+                                                <i class="fa fa-dot-circle-o text-danger"></i> Abierto
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Open</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Closed</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Cancelled</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Abierto</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Cerrado</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Cancelado</a>
                                             </div>
                                         </div>
                                     </td>
-                                    <td><a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="fa fa-download mr-1"></i> Download</a></td>
+                                    <td><a href="javascript:void(0);" class="btn btn-sm btn-primary"><i class="fa fa-download mr-1"></i> Descargar</a></td>
                                     <td class="text-center">
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#" class="dropdown-item edit_job" data-toggle="modal" data-target="#edit_job"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a href="#" class="dropdown-item edit_job" data-toggle="modal" data-target="#edit_job"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -117,7 +117,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Job</h5>
+                        <h5 class="modal-title">Editar Trabajo</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -128,14 +128,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Title</label>
+                                        <label>Título del Trabajo</label>
                                         <input class="form-control" type="text" id="e_job_title" name="job_title">
                                     </div>
                                 </div>
                                 <input class="form-control" type="hidden" id="e_id" name="id" value="">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Department</label>
+                                        <label>Departamento</label>
                                         <select class="select" id="e_department" name="department">
                                             @foreach ($department as $value)
                                             <option value="{{ $value->department }}">{{ $value->department }}</option>
@@ -147,13 +147,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Location</label>
+                                        <label>Ubicación del Trabajo</label>
                                         <input class="form-control" type="text" id="e_job_location" name="job_location" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>No of Vacancies</label>
+                                        <label>No de Vacantes</label>
                                         <input class="form-control" type="text" id="e_no_of_vacancies" name="no_of_vacancies" value="">
                                     </div>
                                 </div>
@@ -161,13 +161,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Experience</label>
+                                        <label>Experiencia</label>
                                         <input class="form-control" type="text" id="e_experience" name="experience" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Age</label>
+                                        <label>Edad</label>
                                         <input class="form-control" type="text" id="e_age" name="age" value="">
                                     </div>
                                 </div>
@@ -175,13 +175,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Salary From</label>
+                                        <label>Salario Desde</label>
                                         <input type="text" class="form-control" id="e_salary_from" name="salary_from" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Salary To</label>
+                                        <label>Salario Hasta</label>
                                         <input type="text" class="form-control" id="e_salary_to" name="salary_to" value="">
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Type</label>
+                                        <label>Tipo de Trabajo</label>
                                         <select class="select" id="e_job_type" name="job_type">
                                             @foreach ($type_job as $job )
                                             <option value="{{ $job->name_type_job }}">{{ $job->name_type_job }}</option>
@@ -199,11 +199,11 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Status</label>
+                                        <label>Estado</label>
                                         <select class="select" id="e_status" name="status">
-                                            <option value="Open">Open</option>
-                                            <option value="Closed">Closed</option>
-                                            <option value="Cancelled">Cancelled</option>
+                                            <option value="Open">Abierto</option>
+                                            <option value="Closed">Cerrado</option>
+                                            <option value="Cancelled">Cancelado</option>
                                         </select>
                                     </div>
                                 </div>
@@ -211,13 +211,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Start Date</label>
+                                        <label>Fecha de Inicio</label>
                                         <input type="text" class="form-control datetimepicker" id="e_start_date" name="start_date" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Expired Date</label>
+                                        <label>Fecha de Vencimiento</label>
                                         <input type="text" class="form-control datetimepicker" id="e_expired_date" name="expired_date" value="">
                                     </div>
                                 </div>
@@ -225,13 +225,13 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Description</label>
+                                        <label>Descripción</label>
                                         <textarea class="form-control" rows="5" id="e_description" name="description"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Update</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Actualizar</button>
                             </div>
                         </form>
                     </div>
@@ -246,16 +246,16 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete Job</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Eliminar Trabajo</h3>
+                            <p>¿Estás seguro de que quieres eliminar?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Eliminar</a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                 </div>
                             </div>
                         </div>

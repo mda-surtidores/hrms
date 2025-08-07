@@ -12,7 +12,7 @@
             <!-- /Logo -->
             <!-- Header Title -->
             <div class="page-title-box float-left">
-                <h3>Jobs List</h3>
+                <h3>Lista de Trabajos</h3>
             </div>
             <!-- /Header Title -->
             <!-- Header Menu -->
@@ -24,7 +24,7 @@
                             <i class="fa fa-search"></i>
                     </a>
                         <form action="search.html">
-                            <input class="form-control" type="text" placeholder="Search here">
+                            <input class="form-control" type="text" placeholder="Buscar aquí">
                             <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                         </form>
                     </div>
@@ -43,10 +43,10 @@
                 <div class="page-header">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h3 class="page-title">Jobs</h3>
+                            <h3 class="page-title">Trabajos</h3>
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Jobs</li>
+                                <li class="breadcrumb-item"><a href="{{ route('home') }}">Panel de Control</a></li>
+                                <li class="breadcrumb-item active">Trabajos</li>
                             </ul>
                         </div>
                     </div>

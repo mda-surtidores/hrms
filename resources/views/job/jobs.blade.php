@@ -8,14 +8,14 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Jobs</h3>
+                        <h3 class="page-title">Trabajos</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Jobs</li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Panel de Control</a></li>
+                            <li class="breadcrumb-item active">Trabajos</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_job"><i class="fa fa-plus"></i> Add Job</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_job"><i class="fa fa-plus"></i> Añadir Trabajo</a>
                     </div>
                 </div>
             </div>
@@ -41,14 +41,14 @@
                                     <th hidden></th>
                                     <th hidden></th>
                                     <th hidden></th>
-                                    <th>Job Title</th>
-                                    <th>Department</th>
-                                    <th>Start Date</th>
-                                    <th>Expire Date</th>
-                                    <th class="text-center">Job Type</th>
-                                    <th class="text-center">Status</th>
-                                    <th>Applicants</th>
-                                    <th class="text-right">Actions</th>
+                                    <th>Título del Trabajo</th>
+                                    <th>Departamento</th>
+                                    <th>Fecha de Inicio</th>
+                                    <th>Fecha de Vencimiento</th>
+                                    <th class="text-center">Tipo de Trabajo</th>
+                                    <th class="text-center">Estado</th>
+                                    <th>Solicitantes</th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -93,12 +93,12 @@
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right jobtype_status">
                                                 <a hidden id="id_update{{ $items->id }}" onclick="setTime({{ $items->id }})">{{ $items->id }}</a>
-                                                <a class="dropdown-item full_time{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-info"></i> Full Time</a>
-                                                <a class="dropdown-item part_time{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-success"></i> Part Time</a>
-                                                <a class="dropdown-item internship{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-danger"></i> Internship<a>
-                                                <a class="dropdown-item temporary{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-warning"></i> Temporary<a>
-                                                <a class="dropdown-item remote{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-dark"></i> Remote</a>
-                                                <a class="dropdown-item others{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-dark"></i> Others</a>
+                                                <a class="dropdown-item full_time{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-info"></i> Tiempo Completo</a>
+                                                <a class="dropdown-item part_time{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-success"></i> Tiempo Parcial</a>
+                                                <a class="dropdown-item internship{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-danger"></i> Prácticas<a>
+                                                <a class="dropdown-item temporary{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-warning"></i> Temporal<a>
+                                                <a class="dropdown-item remote{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-dark"></i> Remoto</a>
+                                                <a class="dropdown-item others{{ $items->id }}" id="status{{ $items->id }}" onclick="setTime({{ $items->id }})"><i class="fa fa-dot-circle-o text-dark"></i> Otros</a>
                                             </div>
                                         </div>
                                     </td>
@@ -114,9 +114,9 @@
                                                 @endif
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Open</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Closed</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Cancelled</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Abierto</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Cerrado</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Cancelado</a>
                                             </div>
                                         </div>
                                     </td>
@@ -126,7 +126,7 @@
                                     <td>
                                         <a href="{{ url('job/applicants/'.$items->job_title) }}" class="btn btn-sm btn-primary">
                                             {{ $apply }}
-                                            Candidates
+                                            Candidatos
                                         </a>
                                     </td>
                                     
@@ -134,8 +134,8 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#" class="dropdown-item edit_job" data-toggle="modal" data-target="#edit_job"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a href="#" class="dropdown-item edit_job" data-toggle="modal" data-target="#edit_job"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#delete_job"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -154,7 +154,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Job</h5>
+                        <h5 class="modal-title">Añadir Trabajo</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -165,15 +165,15 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Title</label>
+                                        <label>Título del Trabajo</label>
                                         <input class="form-control @error('job_title') is-invalid @enderror" type="text" name="job_title" value="{{ old('job_title') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Department</label>
+                                        <label>Departamento</label>
                                         <select class="select @error('department') is-invalid @enderror" name="department">
-                                            <option selected disabled>--Selete--</option>
+                                            <option selected disabled>--Seleccionar--</option>
                                             @foreach ($department as $value)
                                             <option value="{{ $value->department }}" {{ old('department') == $value->department ? "selected" :""}}>{{ $value->department }}</option>
                                             @endforeach
@@ -185,13 +185,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Location</label>
+                                        <label>Ubicación del Trabajo</label>
                                         <textarea class="form-control @error('job_location') is-invalid @enderror" name="job_location" style="height: 44px;">{{ old('job_location') }}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>No of Vacancies</label>
+                                        <label>No de Vacantes</label>
                                         <input class="form-control @error('no_of_vacancies') is-invalid @enderror" type="text" name="no_of_vacancies" value="{{ old('no_of_vacancies') }}">
                                     </div>
                                 </div>
@@ -199,13 +199,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Experience</label>
+                                        <label>Experiencia</label>
                                         <input class="form-control @error('experience') is-invalid @enderror" type="text" name="experience" value="{{ old('experience') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Age</label>
+                                        <label>Edad</label>
                                         <input class="form-control @error('age') is-invalid @enderror" type="number" name="age" value="{{ old('age') }}">
                                     </div>
                                 </div>
@@ -213,13 +213,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Salary From</label>
+                                        <label>Salario Desde</label>
                                         <input type="text" class="form-control @error('salary_from') is-invalid @enderror" name="salary_from" value="{{ old('salary_from') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Salary To</label>
+                                        <label>Salario Hasta</label>
                                         <input type="text" class="form-control @error('salary_to') is-invalid @enderror" name="salary_to" value="{{ old('salary_to') }}">
                                     </div>
                                 </div>
@@ -227,9 +227,9 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Type</label>
+                                        <label>Tipo de Trabajo</label>
                                         <select class="select @error('tob_type') is-invalid @enderror" name="job_type">
-                                            <option selected disabled>--select--</option>
+                                            <option selected disabled>--seleccionar--</option>
                                             @foreach ($type_job as $job )
                                             <option value="{{ $job->name_type_job }}" {{ old('job_type') == $job->name_type_job ? "selected" :""}}>{{ $job->name_type_job }}</option>
                                             @endforeach
@@ -238,11 +238,11 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Status</label>
+                                        <label>Estado</label>
                                         <select class="select @error('status') is-invalid @enderror" name="status">
-                                            <option value="Open">Open</option>
-                                            <option value="Closed">Closed</option>
-                                            <option value="Cancelled">Cancelled</option>
+                                            <option value="Open">Abierto</option>
+                                            <option value="Closed">Cerrado</option>
+                                            <option value="Cancelled">Cancelado</option>
                                         </select>
                                     </div>
                                 </div>
@@ -250,13 +250,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Start Date</label>
+                                        <label>Fecha de Inicio</label>
                                         <input type="text" class="form-control datetimepicker @error('start_date') is-invalid @enderror" name="start_date" value="{{ old('start_date') }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Expired Date</label>
+                                        <label>Fecha de Vencimiento</label>
                                         <input type="text" class="form-control datetimepicker @error('expired_date') is-invalid @enderror" name="expired_date" value="{{ old('expired_date') }}">
                                     </div>
                                 </div>
@@ -264,13 +264,13 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Description</label>
+                                        <label>Descripción</label>
                                         <textarea class="form-control @error('description') is-invalid @enderror" name="description">{{ old('description') }}</textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -284,7 +284,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Job</h5>
+                        <h5 class="modal-title">Editar Trabajo</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -295,14 +295,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Title</label>
+                                        <label>Título del Trabajo</label>
                                         <input class="form-control" type="text" id="e_job_title" name="job_title">
                                     </div>
                                 </div>
                                 <input class="form-control" type="hidden" id="e_id" name="id" value="">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Department</label>
+                                        <label>Departamento</label>
                                         <select class="select" id="e_department" name="department">
                                             @foreach ($department as $value)
                                             <option value="{{ $value->department }}">{{ $value->department }}</option>
@@ -314,13 +314,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Location</label>
+                                        <label>Ubicación del Trabajo</label>
                                         <input class="form-control" type="text" id="e_job_location" name="job_location" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>No of Vacancies</label>
+                                        <label>No de Vacantes</label>
                                         <input class="form-control" type="text" id="e_no_of_vacancies" name="no_of_vacancies" value="">
                                     </div>
                                 </div>
@@ -328,13 +328,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Experience</label>
+                                        <label>Experiencia</label>
                                         <input class="form-control" type="text" id="e_experience" name="experience" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Age</label>
+                                        <label>Edad</label>
                                         <input class="form-control" type="text" id="e_age" name="age" value="">
                                     </div>
                                 </div>
@@ -342,13 +342,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Salary From</label>
+                                        <label>Salario Desde</label>
                                         <input type="text" class="form-control" id="e_salary_from" name="salary_from" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Salary To</label>
+                                        <label>Salario Hasta</label>
                                         <input type="text" class="form-control" id="e_salary_to" name="salary_to" value="">
                                     </div>
                                 </div>
@@ -356,7 +356,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Job Type</label>
+                                        <label>Tipo de Trabajo</label>
                                         <select class="select" id="e_job_type" name="job_type">
                                             @foreach ($type_job as $job )
                                             <option value="{{ $job->name_type_job }}">{{ $job->name_type_job }}</option>
@@ -366,11 +366,11 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Status</label>
+                                        <label>Estado</label>
                                         <select class="select" id="e_status" name="status">
-                                            <option value="Open">Open</option>
-                                            <option value="Closed">Closed</option>
-                                            <option value="Cancelled">Cancelled</option>
+                                            <option value="Open">Abierto</option>
+                                            <option value="Closed">Cerrado</option>
+                                            <option value="Cancelled">Cancelado</option>
                                         </select>
                                     </div>
                                 </div>
@@ -378,13 +378,13 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Start Date</label>
+                                        <label>Fecha de Inicio</label>
                                         <input type="text" class="form-control datetimepicker" id="e_start_date" name="start_date" value="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Expired Date</label>
+                                        <label>Fecha de Vencimiento</label>
                                         <input type="text" class="form-control datetimepicker" id="e_expired_date" name="expired_date" value="">
                                     </div>
                                 </div>
@@ -392,13 +392,13 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Description</label>
+                                        <label>Descripción</label>
                                         <textarea class="form-control" rows="5" id="e_description" name="description"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Update</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Actualizar</button>
                             </div>
                         </form>
                     </div>
@@ -413,16 +413,16 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete Job</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Eliminar Trabajo</h3>
+                            <p>¿Estás seguro de que quieres eliminar?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Eliminar</a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                 </div>
                             </div>
                         </div>

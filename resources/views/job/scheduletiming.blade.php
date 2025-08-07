@@ -9,11 +9,11 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col-12">
-                        <h3 class="page-title">Schedule timing</h3>
+                        <h3 class="page-title">Horario Programado</h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item">Jobs</li>
-                            <li class="breadcrumb-item active">Schedule timing</li>
+                            <li class="breadcrumb-item"><a href="index.html">Panel de Control</a></li>
+                            <li class="breadcrumb-item">Trabajos</li>
+                            <li class="breadcrumb-item active">Horario Programado</li>
                         </ul>
                     </div>
                 </div>
@@ -27,10 +27,10 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Name</th>
-                                    <th>Job Title</th>
-                                    <th>User Available Timings</th>
-                                    <th class="text-center">Schedule timing</th>
+                                    <th>Nombre</th>
+                                    <th>Título del Trabajo</th>
+                                    <th>Horarios Disponibles del Usuario</th>
+                                    <th class="text-center">Horario Programado</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -39,15 +39,15 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
-                                            <a href="profile.html">John Doe <span>Web Designer</span></a>
+                                            <a href="profile.html">John Doe <span>Diseñador Web</span></a>
                                         </h2>
                                     </td>
-                                    <td><a href="job-details.html">Web Developer</a></td>
+                                    <td><a href="job-details.html">Desarrollador Web</a></td>
                                     <td><b>11-03-2020</b> - 11:00 AM-12:00 PM<br><b>12-03-2020</b> - 10:00 AM-11:00 AM<br><b>01-01-1970</b> - 10:00 AM-11:00 AM<br> </td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_job" href="#">
-                                                Schedule Time
+                                                Programar Horario
                                             </a>
                                         </div>
                                     </td>
@@ -57,15 +57,15 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-09.jpg"></a>
-                                            <a href="profile.html">Richard Miles <span>Web Developer</span></a>
+                                            <a href="profile.html">Richard Miles <span>Desarrollador Web</span></a>
                                         </h2>
                                     </td>
-                                    <td><a href="job-details.html">Web Designer</a></td>
+                                    <td><a href="job-details.html">Diseñador Web</a></td>
                                     <td><b>11-03-2020</b> - 11:00 AM-12:00 PM<br><b>12-03-2020</b> - 10:00 AM-11:00 AM<br><b>01-01-1970</b> - 10:00 AM-11:00 AM<br> </td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_job" href="#">
-                                                Schedule Time
+                                                Programar Horario
                                             </a>
                                         </div>
                                     </td>
@@ -75,15 +75,15 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <a href="profile.html" class="avatar"><img alt="" src="assets/img/profiles/avatar-10.jpg"></a>
-                                            <a href="profile.html">John Smith <span>Android Developer</span></a>
+                                            <a href="profile.html">John Smith <span>Desarrollador Android</span></a>
                                         </h2>
                                     </td>
-                                    <td><a href="job-details.html">Android Developer</a></td>
+                                    <td><a href="job-details.html">Desarrollador Android</a></td>
                                     <td><b>11-03-2020</b> - 11:00 AM-12:00 PM<br><b>12-03-2020</b> - 10:00 AM-11:00 AM<br><b>01-01-1970</b> - 10:00 AM-11:00 AM<br> </td>
                                     <td class="text-center">
                                         <div class="action-label">
                                             <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit_job" href="#">
-                                                Schedule Time
+                                                Programar Horario
                                             </a>
                                         </div>
                                     </td>
@@ -102,7 +102,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit</h5>
+                        <h5 class="modal-title">Editar</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -112,15 +112,15 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Schedule Date 1</label>
+                                        <label>Programar Fecha 1</label>
                                         <input type="text" class="form-control datetimepicker" value="3 Mar 2019">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Select Time</label>
+                                        <label>Seleccionar Hora</label>
                                         <select class="select">
-                                            <option>Select Time</option>
+                                            <option>Seleccionar Hora</option>
                                             <option selected>12:00 AM-01:00 AM</option>
                                             <option>01:00 AM-02:00 AM</option>
                                             <option>02:00 AM-03:00 AM</option>
@@ -133,15 +133,15 @@
                         
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Schedule Date 2</label>
+                                        <label>Programar Fecha 2</label>
                                         <input type="text" class="form-control datetimepicker" value="3 Mar 2019">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Select Time</label>
+                                        <label>Seleccionar Hora</label>
                                         <select class="select">
-                                            <option>Select Time</option>
+                                            <option>Seleccionar Hora</option>
                                             <option selected>12:00 AM-01:00 AM</option>
                                             <option>01:00 AM-02:00 AM</option>
                                             <option>02:00 AM-03:00 AM</option>
@@ -154,15 +154,15 @@
                             
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Schedule Date 3</label>
+                                        <label>Programar Fecha 3</label>
                                         <input type="text" class="form-control datetimepicker" value="3 Mar 2019">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Select Time</label>
+                                        <label>Seleccionar Hora</label>
                                         <select class="select">
-                                            <option>Select Time</option>
+                                            <option>Seleccionar Hora</option>
                                             <option selected>12:00 AM-01:00 AM</option>
                                             <option>01:00 AM-02:00 AM</option>
                                             <option>02:00 AM-03:00 AM</option>
@@ -175,7 +175,7 @@
                             </div>
                             
                             <div class="submit-section">
-                                <button class="btn btn-primary submit-btn">Save</button>
+                                <button class="btn btn-primary submit-btn">Guardar</button>
                             </div>
                         </form>
                     </div>
@@ -190,16 +190,16 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Eliminar</h3>
+                            <p>¿Estás seguro de que quieres eliminar?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <div class="row">
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Delete</a>
+                                    <a href="javascript:void(0);" class="btn btn-primary continue-btn">Eliminar</a>
                                 </div>
                                 <div class="col-6">
-                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                    <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                 </div>
                             </div>
                         </div>
